@@ -1,0 +1,7 @@
+@article{inproceedings,
+  title={Efficient Diverse Ensemble for Discriminative Co-Tracking},
+  author={Meshgi, Kourosh and Oba, Shigeyuki and Ishii, Shin},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={4814--4823},
+  year={2018}
+}

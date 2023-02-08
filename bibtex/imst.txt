@@ -1,0 +1,14 @@
+@INPROCEEDINGS{meshgi2018imst, 
+author={Meshgi, Kourosh and Mirzaei, Maryam Sadat and Oba, Shigeyuki}, 
+booktitle={2018 IEEE International Conference on Image Processing (ICIP)}, 
+title={Information-Maximizing Sampling to Promote Tracking-by-Detection}, 
+year={2018}, 
+volume={}, 
+number={}, 
+pages={2700-2704}, 
+keywords={visual tracking;active learning;information maximizing sampling;structured sample learning}, 
+doi={10.1109/ICIP.2018.8451725}, 
+ISSN={2381-8549},  
+month={October},
+abstract={The performance of an adaptive tracking-by-detection algorithm not only depends on the classification and updating processes but also on the sampling. Typically, such trackers select their samples from the vicinity of the last predicted object location, or from its expected location using a predefined motion model, which does not exploit the contents of the samples nor the information provided by the classifier. We introduced the idea of most informative sampling, in which the sampler attempts to select samples that trouble the classifier of a discriminative tracker. We then proposed an active discriminative co-tracker that embed an adversarial sampler to increase its robustness against various tracking challenges. Experiments show that our proposed tracker outperforms state-of-the-art trackers on various benchmark videos.}
+}

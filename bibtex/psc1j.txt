@@ -1,0 +1,12 @@
+@article{mirzaei2017psc1j, 
+title={Partial and synchronized captioning: A new tool to assist learners in developing second language listening skill}, 
+volume={29}, 
+DOI={10.1017/S0958344017000039}, 
+number={2}, 
+journal={ReCALL}, 
+publisher={Cambridge University Press}, 
+author={Mirzaei, Maryam Sadat and Meshgi, Kourosh and Akita, Yuya and Kawahara, Tatsuya}, 
+year={2017}, 
+pages={178–199},
+abstract={This paper introduces a novel captioning method, partial and synchronized captioning (PSC), as a tool for developing second language (L2) listening skills. Unlike conventional full captioning, which provides the full text and allows comprehension of the material merely by reading, PSC promotes listening to the speech by presenting a selected subset of words, where each word is synched to its corresponding speech signal. In this method, word-level synchronization is realized by an automatic speech recognition (ASR) system, dedicated to the desired corpora. This feature allows the learners to become familiar with the correspondences between words and their utterances. Partialization is done by automatically selecting words or phrases likely to hinder listening comprehension. In this work we presume that the incidence of infrequent or specific words and fast delivery of speech are major barriers to listening comprehension. The word selection criteria are thus based on three factors: speech rate, word frequency and specificity. The thresholds for these features are adjusted to the proficiency level of the learners. The selected words are presented to aid listening comprehension while the remaining words are masked in order to keep learners listening to the audio. PSC was evaluated against no-captioning and full-captioning conditions using TED videos. The results indicate that PSC leads to the same level of comprehension as the full-captioning method while presenting less than 30% of the transcript. Furthermore, compared with the other methods, PSC can serve as an effective medium for decreasing dependence on captions and preparing learners to listen without any assistance.}
+}

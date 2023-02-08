@@ -1,0 +1,11 @@
+@article{meshgi2014oapft1,
+  title={Fusion of Multiple Cues from Color and Depth Domains using Occlusion Aware Bayesian Tracker},
+  author={Meshgi, Kourosh and Maeda, Shin-ichi and Oba, Shigeyuki and Ishii, Shin},
+  journal={Technical Report of Neuro Computing},
+  volume={113},
+  number={500},
+  pages={127--132 },
+  year={2014},
+  publisher={IEICE},
+  abstract = {Object tracking has attracted considerable attention recently because of high demands for its everyday-life applications. Appearance-based trackers had a significant improvement during the last decade, however they are still struggling with some challenges that are not addressed completely so far. Tackling background clutter, abrupt changes in target movement, sudden illumination changes and varying scale of the target are the main design goal for many approaches, while occlusion are often left aside due to its complexity. We proposed an occlusion aware Bayesian framework which deals with occlusion in a way that search area for occluded object expands rapidly, that grants trajectory independence and quick occlusion recovery to the algorithm. Furthermore the algorithm employs multiple cues from color and depth domains to have a robust result against illumination changes and clutter. The Bayesian framework is modified in a way to accommodate this probabilistic fusion. Applied to Princeton RGBD Tracking dataset, the performance of our method is discussed and compared with the state-of-the-art trackers.}
+}

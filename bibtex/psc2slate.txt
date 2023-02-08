@@ -1,0 +1,10 @@
+@inproceedings{mirzaei2017psc2slate,
+  author={Maryam Sadat Mirzaei and Kourosh Meshgi and Tatsuya Kawahara},
+  title={Detecting listening difficulty for second language learners using Automatic Speech Recognition errors},
+  year=2017,
+  booktitle={Proc. 7th ISCA Workshop on Speech and Language Technology in Education},
+  pages={156--160},
+  doi={10.21437/SLaTE.2017-27},
+  url={http://dx.doi.org/10.21437/SLaTE.2017-27},
+  abstract={This paper introduces a new approach to detect difficulties in speech for the second language (L2) listeners using automatic speech recognition (ASR) systems. In this study, the ASR systems are viewed as a model to predict L2 learners' listening difficulties and the ASR erroneous cases were analyzed to find useful categories of errors that can epitomize language learners' transcription mistakes. Annotation of the errors revealed the usefulness of several categories of ASR errors in predicting learners' listening difficulties when watching TED videos. Experiments with L2 learners confirmed that these categories lead to listening problems for a majority of the learners. One application to make use of these errors can be found in partial and synchronized caption (PSC), in which only difficult words are selected and shown to facilitate listening. Findings of the experiments attest that adding these errors to PSC improves learners' comprehension.}
+}

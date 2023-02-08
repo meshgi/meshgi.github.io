@@ -1,0 +1,14 @@
+@article {masoumzadeh2011fqlred,
+author = {Masoumzadeh, Seyed Saeid and Meshgi, Kourosh and Ghidari, Saeid Shiry and Taghizadeh, Gelareh},
+title = {FQL-RED: an adaptive scalable schema for active queue management},
+journal = {International Journal of Network Management},
+volume = {21},
+number = {2},
+publisher = {John Wiley & Sons, Ltd.},
+issn = {1099-1190},
+url = {http://dx.doi.org/10.1002/nem.755},
+doi = {10.1002/nem.755},
+pages = {147--167},
+year = {2011},
+abstract={In a potentially congested network, random early detection (RED) active queue management (AQM) proved effective in improving throughput and average queuing delay. The main disadvantage of RED is its sensitive parameters that are impossible to estimate perfectly and adjust manually because of the dynamic nature of the network. For this reason, RED performs differently during different phases of a scenario and there is no guarantee that it will have optimal performance. Giving adaptability to RED has been the subject of broad research studies ever since RED was proposed. After a substantial study of AQM schemes and presenting a novel categorization for so-called modern approaches utilizing artificial intelligence tools to improve AQM, this paper proposes an algorithm enhancing RED as an add-on patch that makes minimal changes to the original RED. Being built on the basis of AQM schemes like ARED and Fuzzy-RED, this algorithm inherits adaptability and is able to adjust RED inaccurate parameters regarding network traffic status, trying to optimize throughput and average queuing delay in a scenario. This algorithm is a Q-learning method enhanced with a fuzzy inference system to provide RED with self-adaptation and improved performance as a result. Given the name of FQL-RED, this algorithm outperformed RED, ARED, and Fuzzy-RED, as the OPNET simulations show.}
+}

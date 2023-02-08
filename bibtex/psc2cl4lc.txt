@@ -1,0 +1,8 @@
+@article{mirzaei2016psc2cl4lc,
+  title={Automatic Speech Recognition Errors as a Predictor of L2 Listening Difficulties},
+  author={Mirzaei, Maryam Sadat and Meshgi, Kourosh and Kawahara, Tatsuya},
+  journal={CL4LC 2016},
+  pages={192},
+  year={2016},
+  abstract = {This paper investigates the use of automatic speech recognition (ASR) errors as indicators of the second language (L2) learners' listening difficulties and in doing so strives to overcome the shortcomings of Partial and Synchronized Caption (PSC) system. PSC is a system that generates a partial caption including difficult words detected based on high speech rate, low frequency, and specificity. To improve the choice of words in this system, and explore a better method to detect speech challenges, ASR errors were investigated as a model of the L2 listener, hypothesizing that some of these errors are similar to those of language learners' when transcribing the videos. To investigate this hypothesis, ASR errors in transcription of several TED talks were analyzed and compared with PSC's selected words. Both the overlapping and mismatching cases were analyzed to investigate possible improvement for the PSC system. Those ASR errors that were not detected by PSC as cases of learners' difficulties were further analyzed and classified into four categories: homophones, minimal pairs, breached boundaries and negatives. These errors were embedded into the baseline PSC to make the enhanced version and were evaluated in an experiment with L2 learners. The results indicated that the enhanced version, which encompasses the ASR errors addresses most of the L2 learners' difficulties and better assists them in comprehending challenging video segments as compared with the baseline.}
+}

@@ -1,0 +1,14 @@
+@inproceedings{masoumzadeh2009deepblue,
+author={S. S. Masoumzadeh and G. Taghizadeh and K. Meshgi and S. Shiry}, 
+booktitle={2009 International Conference on Adaptive and Intelligent Systems}, 
+title={Deep Blue: A Fuzzy Q-Learning Enhanced Active Queue Management Scheme}, 
+year={2009}, 
+volume={}, 
+number={}, 
+pages={43-48}, 
+abstract={Although RED has been widely used with TCP, however it has several known drawbacks [1]. The BLUE algorithm that benefits from a different structure has tried to compensate some of them in a successful way [2]. A quick review on active queue management algorithms from the very beginning indicates that most of them tried to improve classic algorithms. Some of them use network traffic history to achieve more flexibility and prediction ability while others use algorithms such as fuzzy logic to address scalability problem and high input load. Our proposed approach benefits from both: Using fuzzy logic to deal with high input load and embedding expert knowledge into the algorithm while optimizing router decisions with reinforcement learning fed by network traffic history. We call this approach "DEEP BLUE" as is consist of an improved version of BLUE algorithm. Derived from BLUE, our algorithm uses packet drop rate and link idle events to manage congestion. Our experiments using OPNET simulator shows that this scheme works faster and more efficient than original BLUE.}, 
+keywords={fuzzy logic;learning (artificial intelligence);queueing theory;telecommunication congestion control;telecommunication network management;telecommunication network routing;telecommunication traffic;transport protocols;BLUE algorithm;OPNET simulator;RED algorithm;TCP;active queue management algorithm;congestion management;expert knowledge;fuzzy logic;fuzzy q-learning;high input load;network traffic;packet drop rate;random early detection algorithm;reinforcement learning;router decisions optimization;scalability problem;Artificial intelligence;Automatic control;Computer science;Delay;Fuzzy control;Fuzzy logic;Intelligent structures;Machine learning algorithms;Telecommunication traffic;Traffic control;Active Queue Management;Fuzzy Reinforcement Learning;OPNET Simulation}, 
+doi={10.1109/ICAIS.2009.17}, 
+ISSN={}, 
+month={Sept},}
+}

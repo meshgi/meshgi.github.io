@@ -1,0 +1,7 @@
+@inproceedings{masoumzadeh2008fqlmutation,
+  title={Adaptive Mutation in Evolution Strategy using Fuzzy Q-Learning},
+  author={Masoumzadeh, SS and Meshgi, K and Shiry, S},
+  booktitle={13th Iran Computer Association Conf. ICCSC'2008},
+  year={2008},
+  abstract={Evolutionary algorithms, specifically, “Evolutionary Strategy” is governed by a myriad of parameters. A set of these parameters, controls the characteristics of the mutation operator, which in turn affect the final accuracy drastically. We introduced an adaptation scheme to the mutation jump step size, by tuning the parameters of its underlying Gaussian distribution. The proposed method were benchmarked in the optimization task against similar methods and obtain superior results.}
+}

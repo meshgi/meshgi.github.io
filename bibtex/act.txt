@@ -1,0 +1,12 @@
+@Book{meshgi2017act,
+  Title                    = {Active Collaboration of Classifiers for Visual Tracking},
+  Author                   = {Meshgi, Kourosh and Oba, Shigeyuki},
+  Editor                   = {Anbarjafari, Gholamreza and Escalera, Sergio},
+  Publisher                = {Springer},
+  Year                     = {2017},
+  ISBN 					   = {978-953-51-5611-6},
+
+  Abstract                 = {Recently, discriminative visual trackers obtain state-of-the-art performance, yet they suffer in the presence of different real-world challenges such as target motion and appearance changes. In a discriminative tracker, one or more classifiers are employed to obtain the target/non-target label for the samples, which in turn determine the target's location. To cope with variations of the target shape and appearance, the classifier(s) are updated online with different samples of the target and the background. Sample selection, labeling and updating the classifier is prone to various sources of errors that drift the tracker. In this study we motivate, conceptualize, realize and formalize a novel active co-tracking framework, step-by-step to demonstrate the challenges and generic solutions for them. In this framework, not only classifiers cooperate in labeling the samples, but also exchange their information to robustify the labeling, improve the sampling, and realize efficient yet effective updating. The proposed framework is evaluated against state-of-the-art trackers on public dataset and showed promising results.},
+  Booktitle                = {Human-Robot Interaction - Theory and Application}
+}
+

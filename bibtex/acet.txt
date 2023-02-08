@@ -1,0 +1,13 @@
+@article{meshgi2017acet,
+author={Meshgi, Kourosh and Mirzaei, Maryam Sadat and Oba, Shigeyuki and Ishii, Shin}, 
+booktitle={2017 14th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS)}, 
+title={Active collaborative ensemble tracking}, 
+year={2017}, 
+volume={}, 
+number={}, 
+pages={1-6}, 
+abstract={A discriminative ensemble tracker employs multiple classifiers, each of which casts a vote on all of the obtained samples. The votes are then aggregated in an attempt to localize the target object. Such method relies on collective competence and the diversity of the ensemble to approach the target/non-target classification task from different views. However, by updating all of the ensemble using a shared set of samples and their final labels, such diversity is lost or reduced to the diversity provided by the underlying features or internal classifiers' dynamics. Additionally, the classifiers do not exchange information with each other while striving to serve the collective goal, i.e., better classification. In this study, we propose an active collaborative information exchange scheme for ensemble tracking. This, not only orchestrates different classifiers towards a common goal but also provides an intelligent update mechanism to keep the diversity of classifiers and to mitigate the shortcomings of one with the others. The data exchange is optimized with regard to an ensemble uncertainty utility function, and the ensemble is updated via co-training. The evaluations demonstrate promising results realized by the proposed algorithm for the real-world online tracking.}, 
+keywords={image classification;learning (artificial intelligence);object tracking;active collaborative ensemble tracking;active collaborative information exchange scheme;discriminative ensemble tracker;ensemble co-training;ensemble uncertainty utility function;intelligent update mechanism;internal classifiers;Boosting;Collaboration;Labeling;Target tracking;Training;Visualization}, 
+doi={10.1109/AVSS.2017.8078534}, 
+ISSN={}, 
+month={Aug},}

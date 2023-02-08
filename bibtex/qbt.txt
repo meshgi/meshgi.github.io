@@ -1,0 +1,13 @@
+@inproceedings{meshgi2016qbt,
+author={K. Meshgi and S. Oba and S. Ishii}, 
+booktitle={2016 13th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS)}, 
+title={Robust discriminative tracking via query-by-bagging}, 
+year={2016}, 
+volume={}, 
+number={}, 
+pages={8-14}, 
+abstract={Adaptive tracking-by-detection is a popular approach to track arbitrary objects in various situations. Such approaches treat tracking as a classification task and constantly update the object model. The update procedure requires a set of labeled examples, where samples are collected from the last observation, and then labeled. However, these intermediate steps typically follow a set of heuristic rules for labeling and uninformed search in the sample space, which decrease the effectiveness of model update. In this study, we present a framework for adaptive tracking that utilizes active learning for effective sample selection and labeling them. The active sampler employs a committee of randomized-classifiers to select the most informative samples and query their label from an auxiliary detector with a long-term memory. The committee is then updated with the obtained labels. Experiments show that our algorithm outperforms state-of-the-art trackers on various benchmark videos.}, 
+keywords={object tracking;query processing;adaptive tracking;adaptive tracking-by-detection;benchmark videos;effective sample selection;heuristic rules;object model;query-by-bagging;robust discriminative tracking;sample space;state-of-the-art trackers;track arbitrary objects;uninformed search;Adaptation models;Bagging;Detectors;Labeling;Robustness;Target tracking;Training}, 
+doi={10.1109/AVSS.2016.7738027}, 
+ISSN={}, 
+month={Aug},}

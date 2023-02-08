@@ -1,0 +1,14 @@
+@inproceedings{meshgi2015hocx,
+author={K. Meshgi and S. Ishii}, 
+booktitle={2015 14th IAPR International Conference on Machine Vision Applications (MVA)}, 
+title={Expanding histogram of colors with gridding to improve tracking accuracy}, 
+year={2015}, 
+volume={}, 
+number={}, 
+pages={475-479}, 
+abstract={Using color information in object tracking is a prudent choice, but the vast variety of choices and difficulties of obtaining a desirable stable result, unnerves many scholars. Color histograms, as a compact and robust representation is the center of attention while it suffers from lack of spatial information about colors. Besides, comparison and updating such histograms in a meaningful and efficient manner is challenging. In this paper, we proposed the idea of gridding for color histogram, which grants specific statistical property to the histogram through a decomposition phase followed by a recombination stage. Additionally, a thorough comparison of the modern similarity functions and model update techniques in RGB colorspace is presented. This comparison reveals that our proposed method in combination with established similarity measures, enhances the tracking performance.}, 
+keywords={image colour analysis;object tracking;RGB colorspace;color histogram;color information;object tracking;Histograms;Image color analysis;Object tracking;Quantization (signal);Robustness;Target tracking}, 
+doi={10.1109/MVA.2015.7153234}, 
+ISSN={}, 
+month={May},}
+}

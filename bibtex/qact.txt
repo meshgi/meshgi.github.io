@@ -1,0 +1,14 @@
+@INPROCEEDINGS{meshgi2019qact, 
+author={Meshgi, Kourosh and Mirzaei, Maryam Sadat and Oba, Shigeyuki}, 
+booktitle={2019 IEEE International Conference on Image Processing (ICIP)}, 
+title={Long and Short Memory Balancing in Visual Co-Tracking using Q-Learning}, 
+year={2019}, 
+volume={}, 
+number={}, 
+pages={}, 
+keywords={visual tracking;active learning;q-learning;mixture-of-memories}, 
+doi={10.1109/ICIP.2018.8451725}, 
+ISSN={},  
+month={September},
+abstract={Employing one or more additional classifiers to break the self-learning loop in tracing-by-detection has gained considerable attention. Most of such trackers merely utilize the redundancy to address the accumulating label error in the tracking loop, and suffer from high computational complexity as well as tracking challenges that may interrupt all classifiers (e.g. temporal occlusions). We propose the active co-tracking framework, in which the main classifier of the tracker labels samples of video sequence, and only consults auxiliary classifier when it is uncertain. Based on the source of the uncertainty and the differences of two classifiers (e.g. accuracy, speed, update frequency, etc.), different policies should be taken to exchange the information between two classifiers. Here, we introduce a reinforcement learning approach to find the appropriate policy by considering the state of the tracker in a specific sequence. The proposed method yields promising results in comparison to the best tracking-by-detection approaches.}
+}

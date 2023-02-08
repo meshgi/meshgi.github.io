@@ -1,0 +1,9 @@
+@inproceedings{ebrahimi2013stacksmt,
+  title={Meta-level Statistical Machine Translation},
+  author={Sajad Ebrahimi and Kourosh Meshgi and Shahram Khadivi and Mohammad Ebrahim Shiri},
+  booktitle={IJCNLP},
+  year={2013},
+  abstract={We propose a simple and effective method to build a meta-level Statistical Machine Transla-tion (SMT), called meta-SMT, for system combination. Our approach is based on the framework of Stacked Generalization, also known as Stacking, which is an ensemble learning algorithm, widely used in machine learning tasks. First, a collection of base-level SMTs is generated for obtaining a meta-level corpus. Then a meta-level SMT is trained on this corpus. In this paper we address the issue of how to adapt stacked generalization to SMT. We evaluate our approach on English-to-Persian machine translation. Experimental results show that our approach leads to signifi-cant improvements in translation quality over a phrase-based baseline by about 1.1 BLEU points.}
+}
+
+

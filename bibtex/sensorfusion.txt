@@ -1,0 +1,13 @@
+@INPROCEEDINGS{soleimanpour2008sensorfusion, 
+author={S. Soleimanpour and S. S. Ghidary and K. Meshgi}, 
+booktitle={2008 7th IEEE International Conference on Cybernetic Intelligent Systems}, 
+title={Sensor fusion in Robot localization using DS-Evidence Theory with conflict detection using Mahalanobis distance}, 
+year={2008}, 
+volume={}, 
+number={}, 
+pages={1-6}, 
+abstract={This article contains a new approach for combining sensory information for sensors with compatible information. Using Dempster-Shafer evidence theory, we show how to combine sensory information by Yager combination rule. We also present a method to distinguish contrasts between robots sensors outputs based on Mahalanobis distance, and find the sensor with irrelevant outputs. Experiments on a robot facilitated with vision and encoder shows that this approach reduces localization error significantly, having better performance than Kalman filter.}, 
+keywords={Kalman filters;inference mechanisms;mobile robots;robot vision;sensor fusion;uncertainty handling;DS-evidence theory;Dempster-Shafer evidence theory;Kalman filter;Mahalanobis distance;Yager combination rule;conflict detection;localization error;robot localization;robot vision;robots sensors;sensor fusion;sensory information;Dead reckoning;Information technology;Mobile robots;Robot localization;Robot sensing systems;Robot vision systems;Sensor fusion;Sonar;Testing;Uncertainty;Dempster-Shafer Evidence Theory;Localization;Mobile Robot;Sensor Fusion;Yager Combination Rule}, 
+doi={10.1109/UKRICIS.2008.4798964}, 
+ISSN={}, 
+month={Sept},}

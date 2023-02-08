@@ -1,0 +1,14 @@
+@INPROCEEDINGS{meshgi2017qbst, 
+author={Meshgi, Kourosh and Oba, Shigeyuki and Ishii, Shin}, 
+booktitle={2017 14th Conference on Computer and Robot Vision (CRV)}, 
+title={Efficient Version-Space Reduction for Visual Tracking}, 
+year={2017}, 
+volume={}, 
+number={}, 
+pages={139-146}, 
+keywords={Boosting;Labeling;Robustness;Target tracking;Tracking loops;Visualization;label uncertainty;stability-plasticity;version space reduction;visual tracking}, 
+doi={10.1109/CRV.2017.35}, 
+ISSN={}, 
+month={May},
+abstract={Discriminative trackers, employ a classification approach to separate the target from its background. To cope with variations of the target shape and appearance, the classifier is updated online with different samples of the target and the background. Sample selection, labeling and updating the classifier is prone to various sources of errors that drift the tracker. We introduce the use of an efficient version space shrinking strategy to reduce the labeling errors and enhance its sampling strategy by measuring the uncertainty of the tracker about the samples. The proposed tracker, utilize an ensemble of classifiers that represents different hypotheses about the target, diversify them using boosting to provide a larger and more consistent coverage of the version-space and tune the classifiers' weights in voting. The proposed system adjusts the model update rate by promoting the co-training of the short-memory ensemble with a long-memory oracle. The proposed tracker outperformed state-of-the-art trackers on different sequences bearing various tracking challenges.}
+}

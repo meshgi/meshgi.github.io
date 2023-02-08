@@ -1,0 +1,14 @@
+@article{meshgi2016oaptf,
+title = "An occlusion-aware particle filter tracker to handle complex and persistent occlusions",
+journal = "Computer Vision and Image Understanding",
+volume = "150",
+number = "Supplement C",
+pages = "81 - 94",
+year = "2016",
+issn = "1077-3142",
+doi = "https://doi.org/10.1016/j.cviu.2016.05.011",
+url = "http://www.sciencedirect.com/science/article/pii/S1077314216300649",
+author = {Kourosh Meshgi and Shin-ichi Maeda and Shigeyuki Oba and Henrik Skibbe and Yu-zhe Li and Shin Ishii",
+keywords = "Particle filter tracker, Explicit occlusion handling, RGBD tracking",
+abstract = "Although appearance-based trackers have been greatly improved in the last decade, they still struggle with challenges that are not fully resolved. Of these challenges, occlusions, which can be long lasting and of a wide variety, are often ignored or only partly addressed due to the difficulty in their treatments. To address this problem, in this study, we propose an occlusion-aware particle filter framework that employs a probabilistic model with a latent variable representing an occlusion flag. The proposed framework prevents losing the target by prediction of emerging occlusions, updates the target template by shifting relevant information, expands the search area for an occluded target, and grants quick recovery of the target after occlusion. Furthermore, the algorithm employs multiple features from the color and depth domains to achieve robustness against illumination changes and clutter, so that the probabilistic framework accommodates the fusion of those features. This method was applied to the Princeton RGBD Tracking Dataset, and the performance of our method with different sets of features was compared with those of the state-of-the-art trackers. The results revealed that our method outperformed the existing RGB and RGBD trackers by successfully dealing with different types of occlusions.}
+}

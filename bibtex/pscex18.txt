@@ -1,0 +1,7 @@
+@article{meshgi2018pscex18,
+  title={A comprehensive word difficulty index for L2 listening},
+  author={Meshgi, Kourosh and Mirzaei, Maryam Sadat},
+  journal={ExLing 2018},
+  pages={77},
+  year={2018}
+}

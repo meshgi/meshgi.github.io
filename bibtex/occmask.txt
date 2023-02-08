@@ -1,0 +1,13 @@
+@inproceedings{meshgi2016occmask,
+author={K. Meshgi and S. I. Maeda and S. Oba and S. Ishii}, 
+booktitle={2016 13th Conference on Computer and Robot Vision (CRV)}, 
+title={Data-Driven Probabilistic Occlusion Mask to Promote Visual Tracking}, 
+year={2016}, 
+volume={}, 
+number={}, 
+pages={178-185}, 
+abstract={Occlusion, one of the biggest challenges of visual tracking, impedes many trackers by corrupting observations, decaying the template accuracy, or introducing distracting occluders to the tracker. In this study, we propose a technique to detect occlusions through learning the foreground probability distributions. In our approach, the target is divided into a grid cells and the likelihood of occlusion is determined for each cell in a data-driven fashion. We introduce an occlusion indicator for each of the cells. By learning corresponding distribution of this indicator for each cell, using a diverse set of videos and targets, we obtain a set of occlusion probability distributions which is universally applicable to any video or object. By assigning an occlusion likelihood to different cells of an observation (i.e., creating an occlusion mask), our proposed approach provides a confidence measure for different parts of input observations and can be coupled with many generic tracking methods. In this study, we adopt four particle filter-based trackers -- multi-cue PFT, IVT, L1T, and L1APG -- to test the effectiveness of our occlusion mask. Utilizing the proposed occlusion mask lowers the weight of the erroneous parts of observation, allows for a more robust template update, and mitigates distraction by occluders. The method was evaluated on challenging videos. The quantitative results highlighted the tracking accuracy improvement and demonstrated successful tracking under different occlusion scenarios.}, 
+keywords={object tracking;particle filtering (numerical methods);probability;video signal processing;IVT;L1APG;L1T;data-driven probabilistic occlusion mask;foreground probability distributions;multicue PFT;occlusion detection;particle filter-based trackers;visual tracking;Algorithm design and analysis;Computational modeling;Robustness;Target tracking;Visualization;Observation Mask;Occlusion;Visual Tracking}, 
+doi={10.1109/CRV.2016.19}, 
+ISSN={}, 
+month={June},}

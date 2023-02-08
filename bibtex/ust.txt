@@ -1,0 +1,13 @@
+@inproceedings{meshgi2017ust,
+author={K. Meshgi and M. S. Mirzaei and S. Oba and S. Ishii}, 
+booktitle={2017 IEEE International Conference on Signal and Image Processing Applications (ICSIPA)}, 
+title={Efficient asymmetric co-tracking using uncertainty sampling}, 
+year={2017}, 
+volume={}, 
+number={}, 
+pages={241-246}, 
+abstract={Adaptive tracking-by-detection approaches are popular for tracking arbitrary objects. They treat the tracking problem as a classification task and use online learning techniques to update the object model. However, these approaches are heavily invested in the efficiency and effectiveness of their detectors. Evaluating a massive number of samples for each frame (e.g., obtained by a sliding window) forces the detector to trade the accuracy in favor of speed. Furthermore, mis-classification of borderline samples in the detector introduce accumulating errors in tracking. In this study, we propose a co-tracking based on the efficient cooperation of two detectors: a rapid adaptive exemplar-based detector and another more sophisticated but slower detector with a long-term memory. The sampling labeling and co-learning of the detectors are conducted by an uncertainty sampling unit, which improves the speed and accuracy of the system. We also introduce a budgeting mechanism which prevents the unbounded growth in the number of examples in the first detector to maintain its rapid response. Experiments demonstrate the efficiency and effectiveness of the proposed tracker against its baselines and its superior performance against state-of-the-art trackers on various benchmark videos.}, 
+keywords={Conferences;Detectors;Labeling;Optical imaging;Target tracking;Uncertainty}, 
+doi={10.1109/ICSIPA.2017.8120614}, 
+ISSN={}, 
+month={Sept},}

@@ -1,0 +1,11 @@
+@article{meshgi2013oapft2,
+  title={Enhancing Probabilistic Appearance-Based Object Tracking with Depth Information: Object Tracking under Occlusion},
+  author={Meshgi, Kourosh and Li, Yu-zhe and Oba, Shigeyuki and Maeda, Shin-ichi and Ishii, Shin},
+  journal={Technical Report of Infomation-Based Induction Sciences and Machine Learning},
+  volume={13},
+  number={196},
+  pages={85--91},
+  year={2013},
+  publisher={IEICE},
+  abstract = {Object tracking has attracted recent attention because of high demands for its everyday-life applications. Handling occlusions especially in cluttered environments introduced new challenges to the tracking problem; identity loss, splitting/merging, shape changes, shadows and other appearance artifacts trouble appearance-based tracking techniques. Depth-maps provide necessary clues to retrieve occluded objects after they reappear, recombine split group of objects, compensate drastic appearance changes, and reduce the effect of appearance artifacts. In this study, we not only proposed a consistent way of integrating color and depth information in a particle filter framework to efficiently perform the tracking task, but also enhanced the previous color-based particle filtering to achieve trajectory independence and consistency with respect to the target scale. We also exploited local characteristics to represent the target objects and proposed a novel confidence measure for them. Appling to simple tracking problems, the performance of our method is discussed thoroughly.}
+}

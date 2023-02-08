@@ -1,0 +1,6 @@
+@article{kubo2018dqcf,
+  title={Adaptive Correlation Filters for Visual Tracking via Reinforcement Learning},
+  author={Kubo, Akihiro and Meshgi, Kourosh and Oba, Shigeyuki and Ishii, Shin},
+  journal={Proceeding of ECCV'2018 (submitted)},
+  year={2018}
+}

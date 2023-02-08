@@ -1,0 +1,13 @@
+@inproceedings{meshgi2017cmt,
+author={K. Meshgi and S. Oba and S. Ishii}, 
+booktitle={2017 Fifteenth IAPR International Conference on Machine Vision Applications (MVA)}, 
+title={Active discriminative tracking using collective memory}, 
+year={2017}, 
+volume={}, 
+number={}, 
+pages={374-377}, 
+abstract={Ever changing appearance of the targets in real-world scenarios mandates a discriminative tracker to update its classifier(s) on-the-fly, a process during which the model could be updated with irrelevant/noisy data, causing the tracker to drift away from the target over time. The updates should be frequent enough to reflect the latest changes in the target's appearance, whereas the tracker should keep the memory of previous templates to recover from occlusions or temporal variations in appearance of the target (aka the plasticity-stability dilemma). In this study, we proposed a committee of classifiers with different memory spans, to address the appearance changes with various durations. An active learning scheme selects the most disputed samples and queries their labels from a less-frequently updated long-term memory oracle. This combination of memory spans balances the plasticity-stability equilibrium as demonstrated by the experiments and provides a comparable performance to the state-of-the-art trackers with a relatively simple implementation.}, 
+keywords={learning (artificial intelligence);storage management;tracking;active discriminative tracking;active learning;collective memory;discriminative tracker;irrelevant/noisy data;long-term memory oracle;memory spans;plasticity-stability equilibrium;real-world scenarios;temporal variations;Detectors;Intellectual property;Labeling;Organizations;Robustness;Target tracking}, 
+doi={10.23919/MVA.2017.7986879}, 
+ISSN={}, 
+month={May},}

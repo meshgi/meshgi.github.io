@@ -1,0 +1,14 @@
+@article{mirzaei2018psc2j,
+title = "Exploiting automatic speech recognition errors to enhance partial and synchronized caption for facilitating second language listening",
+journal = "Computer Speech & Language",
+volume = "49",
+number = "Supplement C",
+pages = "17 - 36",
+year = "2018",
+issn = "0885-2308",
+doi = "https://doi.org/10.1016/j.csl.2017.11.001",
+url = "http://www.sciencedirect.com/science/article/pii/S0885230816303473",
+author = "Maryam Sadat Mirzaei and Kourosh Meshgi and Tatsuya Kawahara",
+keywords = "Computer-assisted language learning, Second language listening skill, Automatic speech recognition, Partial and synchronized caption",
+abstract = {This paper addresses the viability of using Automatic Speech Recognition (ASR) errors as the predictor of difficulties in speech segments, thereby exploiting them to improve Partial and Synchronized Caption (PSC), which we have proposed to train second language (L2) listening skill by encouraging listening over reading. The system uses ASR technology to make word-level text-to-speech synchronization and generates a partial caption. The baseline system determines difficult words based on three features: speech rate, word frequency and specificity. While it encompasses most of the difficult words, it does not cover a wide range of features that hinder L2 listening. Therefore, we propose the use of ASR systems as a model of L2 listeners and hypothesize that ASR errors can predict challenging speech segments for these learners. Among different cases of ASR errors, annotation results suggest the usefulness of four categories of homophones, minimal pairs, negatives, and breached boundaries for L2 listeners. A preliminary experiment with L2 learners focusing on these four categories of the ASR errors revealed that these cases highlight the problematic speech regions for L2 listeners. Based on the findings, the PSC system is enhanced to incorporate these kinds of useful ASR errors. An experiment with L2 learners demonstrated that the enhanced version of PSC is not only preferable, but also more helpful to facilitate the L2 listening process.}
+}
