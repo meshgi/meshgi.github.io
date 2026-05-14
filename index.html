@@ -1,799 +1,1051 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-	Modified by Kourosh Meshgi
--->
-<html>
-	<head>
-		<title>Homepage of KOUROSH MESHGI</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kourosh Meshgi | Senior Applied Scientist | ML, Computer Vision, NLP, Generative AI</title>
+  <meta name="description" content="PhD in ML from Kyoto University. 10+ years in AI research and industry. Expert in generative AI, computer vision, NLP, and multimodal systems. Published in ACL, CVPR, Interspeech. Based in Arlington, VA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#F1F5EF; --bg-alt:#E6EDE3; --text:#162012; --text-inv:#F1F5EF; --text-muted:#4A5E46;
+      --accent:#235C2A; --accent-dark:#163B1B; --accent-light:#D8EAD9;
+      --amber:#7A5C1E; --amber-light:#F5EDDA;
+      --purple:#6B5B95; --purple-light:#F0EDFA;
+      --green:#2e7d32; --green-light:#e8f5e9;
+      --border:#E2E1DC; --card-bg:#FFFFFF;
+      --shadow-sm:0 1px 3px rgba(0,0,0,.06); --shadow-md:0 4px 16px rgba(0,0,0,.08); --shadow-lg:0 8px 30px rgba(0,0,0,.10);
+      --font-display:'DM Serif Display',Georgia,serif; --font-body:'Source Sans 3','Source Sans Pro',system-ui,sans-serif;
+      --space-xs:.5rem; --space-sm:1rem; --space-md:1.5rem; --space-lg:2.5rem; --space-xl:4rem; --space-2xl:6rem;
+      --max-w:1140px; --radius:10px; --transition:.3s ease;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{color:var(--accent);text-decoration:none;transition:color var(--transition)}
+    a:hover{color:var(--accent-dark)}
+    ul{list-style:none}
+    .container{width:90%;max-width:var(--max-w);margin:0 auto}
+    section{padding:var(--space-2xl) 0}
+    .section-label{font-size:.8rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-xs)}
+    .section-title{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.2;margin-bottom:var(--space-md)}
+    .skip-link{position:absolute;top:-100px;left:1rem;z-index:9999;background:var(--accent);color:#fff;padding:.5rem 1rem;border-radius:0 0 8px 8px;font-weight:600;font-size:.9rem;transition:top .2s ease}
+    .skip-link:focus{top:0;color:#fff}
+    :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+    /* NAV */
+    .site-nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(248,247,244,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow var(--transition)}
+    .site-nav.scrolled{box-shadow:var(--shadow-sm)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{font-family:var(--font-display);font-size:1.35rem;color:var(--text);letter-spacing:.02em}
+    .nav-logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{font-size:.85rem;font-weight:600;color:var(--text-muted);position:relative;padding-bottom:2px}
+    .nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--accent);transition:width var(--transition)}
+    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%}
+    .nav-cta{background:var(--accent);color:#fff!important;padding:.45rem 1.1rem;border-radius:6px;font-size:.82rem;font-weight:600}
+    .nav-cta::after{display:none!important}
+    .nav-cta:hover{background:var(--accent-dark);color:#fff!important}
+    .hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;transition:var(--transition);border-radius:2px}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    /* HERO */
+    .hero{min-height:100vh;display:flex;align-items:center;padding-top:80px;background:linear-gradient(160deg,var(--bg) 60%,var(--accent-light) 100%)}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center}
+    .otw-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:var(--space-sm)}
+    .otw-dot{width:8px;height:8px;border-radius:50%;background:#7dffa8;animation:otw-pulse 2.2s ease-in-out infinite;flex-shrink:0}
+    @keyframes otw-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.55)}}
+    .hero-text h1{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.1;margin-bottom:var(--space-xs)}
+    .hero-text .subtitle{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--accent);font-weight:600;margin-bottom:var(--space-xs)}
+    .hero-text .tags-line{font-size:.92rem;color:var(--text-muted);margin-bottom:var(--space-md);letter-spacing:.04em}
+    .hero-text .bio{font-size:1.03rem;line-height:1.78;color:#3a3a3c;margin-bottom:var(--space-sm)}
+    .hero-text .location{font-size:.92rem;color:var(--text-muted);font-weight:600;margin-bottom:var(--space-lg);display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+    .gc-badge{display:inline-flex;align-items:center;background:var(--accent-light);color:var(--accent-dark);padding:2px 10px;border-radius:12px;font-size:.78rem;font-weight:700;border:1px solid rgba(30,107,120,.2)}
+    .cta-group{display:flex;gap:var(--space-sm);flex-wrap:wrap;margin-bottom:var(--space-lg)}
+    .btn{display:inline-flex;align-items:center;gap:.45rem;padding:.78rem 1.65rem;border-radius:8px;font-size:.95rem;font-weight:600;cursor:pointer;border:none;transition:all var(--transition)}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{background:var(--accent-dark);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+    .btn-outline{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+    .btn-outline svg{width:15px;height:15px;transition:transform var(--transition)}
+    .btn-outline:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+    .btn-outline:hover svg{transform:translateX(3px)}
+    .social-row{display:flex;gap:var(--space-sm)}
+    .social-row a{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--bg-alt);color:var(--text-muted);transition:all var(--transition)}
+    .social-row a:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+    .social-row svg{width:20px;height:20px}
+    .hero-image{display:flex;justify-content:center;align-items:center}
+    .hero-photo-wrapper{position:relative;width:340px;height:340px}
+    .hero-photo-wrapper::before{content:'';position:absolute;inset:-11px;border:2px solid #fff;border-radius:50%;opacity:.7}
+    .hero-photo-wrapper::after{content:'';position:absolute;inset:-24px;border:1px dashed #ccc;border-radius:50%;opacity:.5}
+    .hero-photo-placeholder{width:100%;height:100%;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:5rem;color:var(--accent);box-shadow:var(--shadow-lg),0 0 0 1px rgba(0,0,0,.06);overflow:hidden}
+    .hero-photo-placeholder img{width:102%;height:102%;object-fit:cover;object-position:center top}
+    /* WHAT I DO */
+    #what-i-do{background:var(--bg-alt)}
+    .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-md)}
+    .pillar-card{background:var(--card-bg);border-radius:var(--radius);padding:var(--space-lg);box-shadow:var(--shadow-sm);border:1px solid var(--border);transition:transform .3s ease,box-shadow .3s ease;position:relative;overflow:hidden}
+    .pillar-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),#2a9aac);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+    .pillar-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+    .pillar-card:hover::before{transform:scaleX(1)}
+    .pillar-icon{width:56px;height:56px;border-radius:14px;background:var(--accent-light);color:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-sm);transition:background var(--transition),color var(--transition),box-shadow var(--transition)}
+    .pillar-icon svg{width:28px;height:28px}
+    .pillar-card:hover .pillar-icon{background:var(--accent);color:#fff;box-shadow:0 0 0 7px rgba(30,107,120,.1)}
+    .pillar-card h3{font-family:var(--font-display);font-size:1.25rem;margin-bottom:var(--space-xs)}
+    .pillar-card p{font-size:.93rem;color:var(--text-muted);margin-bottom:var(--space-sm)}
+    .tag-row{display:flex;flex-wrap:wrap;gap:6px}
+    .tag{font-size:.73rem;font-weight:600;padding:3px 9px;border-radius:20px;background:rgba(30,107,120,.07);color:var(--accent);border:1px solid rgba(30,107,120,.15)}
+    /* PROJECTS */
+    #projects{background:var(--bg)}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-md)}
+    .project-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-lg);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;display:flex;flex-direction:column;position:relative;overflow:hidden}
+    .project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--amber));transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+    .project-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:transparent}
+    .project-card:hover::before{transform:scaleX(1)}
+    .project-meta{font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:var(--space-xs)}
+    .project-card h3{font-family:var(--font-display);font-size:1.2rem;margin-bottom:var(--space-xs)}
+    .project-card .desc{font-size:.93rem;color:#444;line-height:1.7;margin-bottom:var(--space-xs)}
+    .project-card .why{font-size:.88rem;font-style:italic;color:var(--amber);margin-bottom:var(--space-sm);font-weight:500}
+    .project-card .tag-row{margin-top:auto}
+    .project-card .tag{background:var(--bg-alt);color:var(--text-muted);border-color:transparent}
+    /* EXPERIENCE */
+    #experience{background:var(--bg-alt)}
+    .timeline{position:relative;max-width:800px;margin:0 auto}
+    .timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--border);transform:translateX(-50%)}
+    .timeline-item{position:relative;margin-bottom:var(--space-lg);display:flex}
+    .timeline-item:nth-child(odd){justify-content:flex-start;padding-right:calc(50% + 30px)}
+    .timeline-item:nth-child(even){justify-content:flex-end;padding-left:calc(50% + 30px)}
+    .timeline-dot{position:absolute;left:50%;top:20px;width:14px;height:14px;background:var(--accent);border:3px solid var(--bg-alt);border-radius:50%;transform:translateX(-50%);z-index:1}
+    .timeline-content{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-md);box-shadow:var(--shadow-sm);transition:box-shadow var(--transition)}
+    .timeline-content:hover{box-shadow:var(--shadow-md)}
+    .timeline-content .date{font-size:.78rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+    .timeline-content h3{font-family:var(--font-display);font-size:1.1rem;margin:4px 0 2px}
+    .timeline-content .company{font-weight:600;color:var(--text-muted);font-size:.9rem}
+    .timeline-content p{font-size:.88rem;color:#555;margin-top:8px}
+    .co-type{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:8px;margin-bottom:4px}
+    .co-type--startup{background:rgba(30,107,120,.1);color:var(--accent)}
+    .co-type--research{background:var(--amber-light);color:var(--amber)}
+    .co-type--industry{background:var(--purple-light);color:var(--purple)}
+    .co-type--postdoc{background:#e8f5e9;color:#2e7d32}
+    .co-type--early{background:var(--bg-alt);color:var(--text-muted);border:1px solid var(--border)}
+    /* RESEARCH */
+    #research{background:var(--bg)}
+    .research-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:var(--space-xl)}
+    .research-stats .stat-block{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-sm);margin-bottom:var(--space-lg)}
+    .stat{text-align:center;padding:var(--space-sm);background:var(--card-bg);border-radius:var(--radius);border:1px solid var(--border)}
+    .stat .number{font-family:var(--font-display);font-size:2.2rem;color:var(--accent);line-height:1}
+    .stat .label{font-size:.82rem;color:var(--text-muted);margin-top:4px}
+    .research-links{display:flex;flex-direction:column;gap:var(--space-xs);margin-bottom:var(--space-md)}
+    .research-links a{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem}
+    .venue-badges{display:flex;flex-wrap:wrap;gap:8px}
+    .venue-badge{font-size:.78rem;font-weight:700;padding:5px 14px;border-radius:20px;background:var(--accent);color:#fff}
+    .paper-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-md);margin-bottom:var(--space-sm);transition:box-shadow var(--transition)}
+    .paper-card:hover{box-shadow:var(--shadow-md)}
+    .paper-venue{display:inline-block;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:4px;background:var(--amber-light);color:var(--amber);margin-bottom:8px}
+    .paper-card h4{font-family:var(--font-display);font-size:1.05rem;margin-bottom:6px}
+    .paper-card p{font-size:.88rem;color:#555}
+    .paper-card .tag-row{margin-top:var(--space-xs)}
+    .paper-card .tag{background:var(--bg-alt);color:var(--text-muted);border-color:transparent;font-size:.72rem}
+    /* RESEARCH THREADS TOGGLE */
+    .threads-toggle-wrapper{margin-top:var(--space-lg);padding-top:var(--space-lg);border-top:1px solid var(--border)}
+    .threads-toggle-btn{display:inline-flex;align-items:center;gap:10px;background:none;border:1.5px solid var(--accent);border-radius:8px;padding:.6rem 1.25rem;color:var(--accent);font-family:var(--font-body);font-weight:700;font-size:.92rem;cursor:pointer;transition:background var(--transition),color var(--transition)}
+    .threads-toggle-btn:hover{background:var(--accent-light)}
+    .threads-chevron{width:16px;height:16px;flex-shrink:0;transition:transform .35s ease}
+    .threads-toggle-btn[aria-expanded="true"] .threads-chevron{transform:rotate(180deg)}
+    .threads-panel[hidden]{display:none}
+    .threads-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-md);padding-top:var(--space-md)}
+    .thread-card{background:var(--card-bg);border-radius:var(--radius);border:1px solid var(--border);padding:var(--space-md);position:relative;overflow:hidden}
+    .thread-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+    .thread-card--tracking::before{background:var(--accent)}
+    .thread-card--nlp::before{background:var(--amber)}
+    .thread-card--language::before{background:var(--purple)}
+    .thread-chip{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:2px 9px;border-radius:10px;margin-bottom:6px}
+    .thread-chip--tracking{background:var(--accent-light);color:var(--accent)}
+    .thread-chip--nlp{background:var(--amber-light);color:var(--amber)}
+    .thread-chip--language{background:var(--purple-light);color:var(--purple)}
+    .thread-meta{font-size:.8rem;color:var(--text-muted);display:flex;gap:12px;margin-bottom:10px}
+    .thread-card h4{font-family:var(--font-display);font-size:1.05rem;margin-bottom:8px}
+    .thread-desc{font-size:.87rem;color:#555;line-height:1.6;margin-bottom:var(--space-sm)}
+    .thread-papers-list{display:flex;flex-direction:column}
+    .thread-paper{font-size:.8rem;color:var(--text-muted);padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:baseline}
+    .thread-paper:last-child{border-bottom:none}
+    .thread-paper-venue{flex-shrink:0;font-size:.7rem;font-weight:700;color:var(--amber)}
+    .thread-papers-link{display:inline-flex;align-items:center;gap:5px;font-size:.82rem;font-weight:700;color:var(--accent);margin-top:10px}
+    .thread-papers-link svg{width:12px;height:12px;transition:transform .2s}
+    .thread-papers-link:hover svg{transform:translateX(3px)}
+    /* CAROUSEL */
+    #papers-carousel{background:var(--bg-alt)}
+    .carousel-wrapper{display:flex;align-items:center;gap:12px}
+    .carousel-track{flex:1;display:flex;gap:16px;overflow-x:scroll;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:12px 2px 16px;cursor:grab}
+    .carousel-track::-webkit-scrollbar{display:none}
+    .carousel-track.is-dragging{cursor:grabbing;user-select:none}
+    .paper-slide{flex-shrink:0;width:280px;scroll-snap-align:start;background:var(--card-bg);border-radius:var(--radius);border:1px solid var(--border);padding:20px 20px 16px;display:flex;flex-direction:column;gap:8px;transition:box-shadow .25s ease,transform .25s ease;position:relative;overflow:hidden;cursor:pointer}
+    .paper-slide:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+    .paper-slide::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--radius) var(--radius) 0 0}
+    .paper-slide[data-thread="tracking"]::before{background:var(--accent)}
+    .paper-slide[data-thread="nlp"]::before{background:var(--amber)}
+    .paper-slide[data-thread="language"]::before{background:var(--purple)}
+    .paper-slide[data-thread="gen-ai"]::before{background:var(--green)}
+    .paper-slide__meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .paper-slide__venue{font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:4px;background:var(--amber-light);color:var(--amber)}
+    .paper-slide__thread{font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:10px}
+    .thread--tracking{background:var(--accent-light);color:var(--accent)}
+    .thread--nlp{background:var(--amber-light);color:var(--amber)}
+    .thread--language{background:var(--purple-light);color:var(--purple)}
+    .thread--gen-ai{background:var(--green-light);color:var(--green)}
+    .paper-slide__title{font-family:var(--font-display);font-size:1rem;line-height:1.35;flex:1}
+    .paper-slide__teaser{font-size:.83rem;color:var(--text-muted);line-height:1.55}
+    .paper-slide__cta{margin-top:auto;padding-top:8px;font-size:.78rem;font-weight:700;color:var(--accent);display:flex;align-items:center;gap:4px}
+    .paper-slide__cta svg{width:12px;height:12px;transition:transform .2s ease}
+    .paper-slide:hover .paper-slide__cta svg{transform:translateX(3px)}
+    .carousel-btn{flex-shrink:0;width:38px;height:38px;border-radius:50%;border:1px solid var(--border);background:var(--card-bg);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s ease;color:var(--text-muted)}
+    .carousel-btn svg{width:16px;height:16px}
+    .carousel-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .carousel-dots{display:flex;justify-content:center;gap:6px;margin-top:12px;flex-wrap:wrap}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--border);border:none;cursor:pointer;transition:background .2s ease,transform .2s ease;padding:0}
+    .dot.active{background:var(--accent);transform:scale(1.25)}
+    /* MODAL */
+    .paper-modal{position:fixed;inset:0;z-index:3000;display:flex;align-items:center;justify-content:center;padding:20px}
+    .paper-modal[hidden]{display:none}
+    .paper-modal__overlay{position:absolute;inset:0;background:rgba(22,32,18,.75);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+    .paper-modal__card{position:relative;background:var(--card-bg);border-radius:16px;max-width:640px;width:100%;max-height:88vh;overflow-y:auto;padding:32px;box-shadow:0 24px 60px rgba(0,0,0,.3);animation:modal-in .25s ease}
+    @keyframes modal-in{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+    .paper-modal__close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;border:1px solid var(--border);background:var(--bg-alt);font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-muted);transition:all .2s ease}
+    .paper-modal__close:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .paper-modal__header{margin-bottom:var(--space-md);padding-right:40px}
+    .paper-modal__badges{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+    .paper-modal__venue{font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:4px;background:var(--amber-light);color:var(--amber)}
+    .paper-modal__thread{font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 9px;border-radius:10px}
+    .paper-modal__title{font-family:var(--font-display);font-size:1.35rem;line-height:1.3}
+    .paper-modal__body{margin-bottom:var(--space-md)}
+    .star-section{margin-bottom:14px}
+    .star-section::before{content:attr(data-label);display:block;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+    .star-section p{font-size:.9rem;color:#444;line-height:1.65}
+    .paper-modal__datasets{margin-bottom:var(--space-sm)}
+    .paper-modal__datasets-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
+    .dataset-pills{display:flex;flex-wrap:wrap;gap:6px}
+    .dataset-pill{font-size:.75rem;padding:3px 10px;border-radius:20px;background:var(--bg-alt);color:var(--text-muted);border:1px solid var(--border)}
+    .paper-modal__tags .tag{font-size:.72rem}
+    /* AWARDS */
+    #awards{background:var(--bg)}
+    .awards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--space-sm);margin-bottom:var(--space-lg)}
+    .award-item{display:flex;align-items:flex-start;gap:var(--space-sm);background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-md);transition:transform .3s ease,box-shadow .3s ease}
+    .award-item:hover{box-shadow:var(--shadow-sm);transform:translateY(-2px)}
+    .award-year{flex-shrink:0;font-family:var(--font-display);font-size:1.3rem;color:var(--amber);min-width:55px}
+    .award-item p{font-size:.9rem;color:#444}
+    .reviewer-box{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-md)}
+    .reviewer-box h3{font-family:var(--font-display);font-size:1.15rem;margin-bottom:8px}
+    .reviewer-box p{font-size:.9rem;color:#555}
+    /* CONTACT */
+    #contact{background:linear-gradient(160deg,#162012 0%,#0d1509 100%);color:var(--text-inv)}
+    #contact .section-label{color:var(--amber)}
+    #contact .section-title{color:#fff}
+    #contact .contact-body{font-size:1.05rem;color:rgba(255,255,255,.75);max-width:640px;margin-bottom:var(--space-lg);line-height:1.8}
+    #contact .contact-body strong{color:#fff}
+    .contact-links{display:flex;flex-wrap:wrap;gap:var(--space-sm)}
+    .contact-link{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:.65rem 1.2rem;color:rgba(255,255,255,.8);font-size:.92rem;font-weight:500;transition:all var(--transition)}
+    .contact-link:hover{background:rgba(255,255,255,.16);color:#fff;transform:translateY(-2px)}
+    .contact-link svg{width:18px;height:18px;flex-shrink:0}
+    /* FOOTER */
+    .site-footer{background:#071820;color:rgba(255,255,255,.4);padding:var(--space-lg) 0 var(--space-md)}
+    .footer-inner{display:flex;flex-direction:column;align-items:center;gap:var(--space-md)}
+    .footer-brand{text-align:center}
+    .footer-name{font-family:var(--font-display);font-size:1.2rem;color:rgba(255,255,255,.85);letter-spacing:.03em;margin-bottom:4px}
+    .footer-tagline{font-size:.82rem;color:rgba(255,255,255,.4)}
+    .footer-social{display:flex;gap:12px}
+    .footer-social a{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.5);transition:all .2s ease}
+    .footer-social a:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-2px)}
+    .footer-social svg{width:17px;height:17px}
+    .footer-links{display:flex;gap:var(--space-md);flex-wrap:wrap;justify-content:center}
+    .footer-links a{font-size:.82rem;color:rgba(255,255,255,.4);transition:color .2s ease}
+    .footer-links a:hover{color:rgba(255,255,255,.8)}
+    .footer-copy{font-size:.78rem;color:rgba(255,255,255,.25);padding-top:var(--space-sm);border-top:1px solid rgba(255,255,255,.07);text-align:center;width:100%}
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .hero-grid{grid-template-columns:1fr;text-align:center}
+      .hero-image{order:-1;margin-bottom:var(--space-md)}
+      .hero-photo-wrapper{width:260px;height:260px}
+      .cta-group{justify-content:center}
+      .social-row{justify-content:center}
+      .hero-text .location{justify-content:center}
+      .pillars-grid{grid-template-columns:1fr 1fr}
+      .projects-grid{grid-template-columns:1fr}
+      .research-grid{grid-template-columns:1fr}
+      .threads-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      section{padding:var(--space-xl) 0}
+      .nav-links{display:none;flex-direction:column;gap:var(--space-sm);position:absolute;top:64px;left:0;width:100%;background:rgba(248,247,244,.97);backdrop-filter:blur(12px);padding:var(--space-md);border-bottom:1px solid var(--border)}
+      .nav-links.open{display:flex}
+      .hamburger{display:block}
+      .hero{min-height:auto;padding-top:100px;padding-bottom:var(--space-xl)}
+      .hero-text h1{font-size:2rem}
+      .hero-photo-wrapper{width:200px;height:200px}
+      .hero-photo-placeholder{font-size:3.5rem}
+      .pillars-grid{grid-template-columns:1fr}
+      .timeline::before{left:16px}
+      .timeline-item:nth-child(odd),.timeline-item:nth-child(even){justify-content:flex-start;padding-left:46px;padding-right:0}
+      .timeline-dot{left:16px}
+      .awards-grid{grid-template-columns:1fr}
+      .contact-links{flex-direction:column}
+      .carousel-btn{display:none}
+      .paper-modal__card{padding:24px 20px}
+      .footer-links{gap:var(--space-sm)}
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<nav class="site-nav" id="nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo" aria-label="Kourosh Meshgi home">K<span>M</span></a>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="#what-i-do">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#papers-carousel">Papers</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+  </div>
+</nav>
 
-	
-		<!-- Vendor CSS Files -->
-		<!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet"> -->
-		<!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-		<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-		<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-		<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-		<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-		
-		<!-- Template Main CSS File -->
-		<link href="assets/css/style.css" rel="stylesheet">
-		
-		<!-- =======================================================
-		* Template Name: MyResume - v4.8.1
-		* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-		* Author: BootstrapMade.com
-		* License: https://bootstrapmade.com/license/
-		======================================================== -->
-		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script> -->
-		<script src="js/functions.js" type="text/javascript"></script>
-	</head>
-	<body>
+<main id="main-content">
 
-			<!-- ======= Mobile nav toggle button ======= -->
-			<!--
-			<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-			<header id="header2" class="d-flex flex-column justify-content-center">
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="otw-badge"><span class="otw-dot" aria-hidden="true"></span>Open to Work</div>
+        <h1>Kourosh Meshgi, PhD</h1>
+        <p class="subtitle">Senior Applied Scientist &amp; Technical Lead</p>
+        <p class="tags-line">ML · Computer Vision · NLP · Generative AI</p>
+        <p class="bio">I build AI systems that work, from research prototype to production deployment. With a PhD from Kyoto University and 10+ years spanning academic research, government-funded projects, and industry leadership, I specialize in the intersection of computer vision, natural language processing, and multimodal generative AI.</p>
+        <p class="location">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Based in Arlington, VA
+          <span class="gc-badge">US Permanent Resident</span>
+        </p>
+        <div class="cta-group">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#research" class="btn btn-outline">See My Research <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h12M9 4l4 4-4 4"/></svg></a>
+        </div>
+        <div class="social-row">
+          <a href="https://github.com/meshgi" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+          <a href="https://linkedin.com/in/kouroshmeshgi" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://scholar.google.com/citations?user=WejG0Z8AAAAJ" aria-label="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"/></svg></a>
+          <a href="mailto:kouroshmeshgi@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg></a>
+        </div>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <div class="hero-photo-wrapper"><div class="hero-photo-placeholder"><img src="https://raw.githubusercontent.com/meshgi/meshgi.github.io/master/images/kourosh%20meshgi.jpg" alt="Kourosh Meshgi"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-				<nav id="navbar" class="navbar nav-menu">
-				<ul>
-					<li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-					<li><a href="#publication" class="nav-link scrollto"><i class="bx bx-bong"></i> <span>Publications</span></a></li>
-					<li><a href="#activities" class="nav-link scrollto"><i class="bx bx-book-bookmark"></i> <span>Activities</span></a></li>
-					<li><a href="#projects" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
-					<li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-				</ul>
-				</nav>
-			</header> -->
+<section id="what-i-do">
+  <div class="container">
+    <p class="section-label reveal">Expertise</p>
+    <h2 class="section-title reveal">What I Do</h2>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <div class="pillar-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 014 4c0 1.5-.8 2.8-2 3.5v1h-4v-1A4 4 0 0112 2z"/><path d="M10 10.5v2m4-2v2m-5 0h6v1.5a3 3 0 01-6 0V12.5z"/><circle cx="12" cy="19" r="2.5"/><path d="M12 16v.5"/></svg></div>
+        <h3>Generative AI &amp; LLM Systems</h3>
+        <p>Fine-tuning, red-teaming, RAG pipelines, multimodal LLMs, agentic workflows (A2A, MCP). From model evaluation to production-ready deployment.</p>
+        <div class="tag-row"><span class="tag">GPT</span><span class="tag">LLaVA</span><span class="tag">Qwen-VL</span><span class="tag">CLIP</span><span class="tag">LoRA</span><span class="tag">DPO</span><span class="tag">RAG</span></div>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 5v-.5M12 19.5V19M18.36 5.64l-.35.35M6 18l-.35.35M19.5 12H19M5.5 12H5M18.36 18.36l-.35-.35M6 6l-.35-.35"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Computer Vision &amp; Perception</h3>
+        <p>Object tracking, detection, segmentation, scene understanding, video analysis. 15+ papers on robust visual tracking under real-world conditions published in CVPR, ICIP, ACCV.</p>
+        <div class="tag-row"><span class="tag">Object Tracking</span><span class="tag">YOLO</span><span class="tag">Florence</span><span class="tag">OpenCV</span><span class="tag">PyTorch</span><span class="tag">Video Analysis</span></div>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>NLP, Speech &amp; Multimodal Systems</h3>
+        <p>Text classification, multi-task learning, named entity recognition, ASR-based systems, cross-lingual knowledge. Published in ACL and Interspeech.</p>
+        <div class="tag-row"><span class="tag">BERT</span><span class="tag">Transformers</span><span class="tag">ASR</span><span class="tag">MTL</span><span class="tag">NER</span><span class="tag">Multilingual</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<section id="projects">
+  <div class="container">
+    <p class="section-label reveal">Portfolio</p>
+    <h2 class="section-title reveal">Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <p class="project-meta">SelfMinds AI · 2025–Present</p>
+        <h3>Automation-from-Demonstration (AfD)</h3>
+        <p class="desc">Converts raw screen recordings into executable automation plans through self-corrective imitation learning, the system watches a human demonstrate a task once, infers the underlying intent, and synthesizes a replicable policy without manual scripting. UI understanding fuses OCR, DOM, SOM (visual element detection and indexing), VLM, and transformer-based template matching into a unified perceptual layer. These signals are unified through graph-grounded UI reasoning, where screen elements become nodes in a relational graph and actions are resolved as edges, making the planner robust to layout changes and dynamic content. Context-aware trajectory synthesis then generates action sequences that adapt to state at each step rather than replaying a fixed script, and adaptive policy refinement continuously corrects drift using execution feedback, closing the loop between observation and action.</p>
+        <p class="why">↳ Enables non-technical users to automate complex UI workflows without writing a single line of code.</p>
+        <div class="tag-row"><span class="tag">VLM</span><span class="tag">SOM</span><span class="tag">OCR</span><span class="tag">DOM Parsing</span><span class="tag">Graph Reasoning</span><span class="tag">Imitation Learning</span><span class="tag">Agentic AI</span><span class="tag">Transformer</span></div>
+      </div>
+      <div class="project-card reveal">
+        <p class="project-meta">SelfMinds AI · 2025–Present</p>
+        <h3>Multimodal Video RAG System</h3>
+        <p class="desc">A full-stack multimodal RAG pipeline that extracts every computable signal from video, visual, speech, textual, and semantic, and unifies them into a single timestamp-aligned knowledge structure. Scene boundaries are detected automatically; keyframes are captioned by a VLM; speech is transcribed and force-aligned at the word level; on-screen text is recovered via EAST detection and OCR; speakers are diarized without supervision and identified by name through LLM reasoning over transcript, title, and context signals. CLIP embeddings indexed in FAISS enable sub-second semantic frame retrieval by text or image query, while a hybrid search layer fuses transcript and OCR hits. An LLM-powered query planner routes natural language questions to the right analysis path, returning answers, timestamps, or assembled highlight reels.</p>
+        <p class="why">↳ Turns any unstructured video into a fully queryable knowledge base, ask a question and get a moment.</p>
+        <div class="tag-row"><span class="tag">RAG</span><span class="tag">CLIP</span><span class="tag">FAISS</span><span class="tag">VLM</span><span class="tag">Whisper</span><span class="tag">Speaker Diarization</span><span class="tag">OCR</span><span class="tag">LLM Query Planning</span></div>
+      </div>
+      <div class="project-card reveal">
+        <p class="project-meta">SelfMinds AI · 2025–Present</p>
+        <h3>Adaptive Agentic AI Simulations</h3>
+        <p class="desc">Orchestrated multi-agent systems for personalized user behavior modeling, building behavior-driven simulations that support realistic agentic task execution and long-horizon planning. Agents communicate via the A2A protocol, each instantiated with a distinct persona and curated information context. Evaluation coverage is comprehensive: from replicating user perception and modeling decision-making behavior and reasoning, to identifying pain points and surfacing concrete improvement avenues, closing the loop between simulation and actionable product insight. A core addition: structured internal dialogue between agents, governed by a dedicated moderator agent that detects and corrects persona drift in real time, preventing the homogenization that collapses multi-agent discussions into a single voice and steering participants toward complementary, synergistic contributions.</p>
+        <p class="why">↳ Full-spectrum evaluation: perception → behavior → reasoning → pain points → improvement, grounded in realistic persona-driven simulation at scale.</p>
+        <div class="tag-row"><span class="tag">Multi-Agent</span><span class="tag">Agent-to-Agent</span><span class="tag">Persona Simulation</span><span class="tag">Behavior Modeling</span><span class="tag">Agent Moderation</span><span class="tag">Long-horizon Planning</span></div>
+      </div>
+      <div class="project-card reveal">
+        <p class="project-meta">Yodayoda · 2020–2021</p>
+        <h3>World Map Auto-Generation for Robots</h3>
+        <p class="desc">Led a 7-person team building vision-based SLAM systems for urban autonomous navigation, producing enriched context-aware world models that go well beyond traditional navigation layers. The multi-modal perception pipeline fused camera-based scene understanding, LiDAR, IMU, and photogrammetry-driven 3D point cloud reconstruction with semantic environment parsing, enabling detection and reasoning over traffic dynamics, pedestrian behavior, urban structures, occlusions, road hazards, traffic signal patterns, and risk-prone intersections. External signals (crash statistics, environmental conditions, behavioral traffic patterns) were incorporated to model real-world operational risk directly in the map. A specialized focus on occlusion reasoning and perception failure analysis identified scenarios where both human drivers and autonomous systems fail to detect hidden objects or hazardous trajectories, embedding that safety awareness into the mapping framework. Robustness was validated across diverse traffic densities, weather, lighting, and urban layouts, including complex Japanese road systems and left-side driving, and extended by large-scale simulation environments covering globally diverse edge cases.</p>
+        <p class="why">↳ Spatial AI at the intersection of computer vision, sensor fusion, and human safety. Context-aware maps that make autonomous navigation interpretable and failure-resistant in real-world urban complexity.</p>
+        <div class="tag-row"><span class="tag">SLAM</span><span class="tag">LiDAR / IMU Fusion</span><span class="tag">3D Point Cloud</span><span class="tag">Object Detection</span><span class="tag">Scene Understanding</span><span class="tag">Occlusion Reasoning</span><span class="tag">Autonomous Vehicles</span><span class="tag">Team Lead</span></div>
+      </div>
+      <div class="project-card reveal">
+        <p class="project-meta">RIKEN AIP · 2019–2023</p>
+        <h3>SHINRA: Multilingual Wikipedia Knowledge Structuring</h3>
+        <p class="desc">Existing structured knowledge bases (Wikidata, DBpedia, Freebase) are notoriously noisy, schema mismatches, ambiguous attributes, and sparse coverage across languages. SHINRA tackled this from both ends: a top-down Extended Named Entity (ENE) ontology of 219 fine-grained categories with 10–30 typed attributes each, combined with bottom-up population through a collaborative evaluation framework where research teams worldwide run their information extraction systems on the full Wikipedia and contribute outputs that are ensemble-merged. Two task tracks ran annually: the Japanese Attribute Extraction task (extracting structured attribute values from Wikipedia pages across 45+ entity categories, with 15+ systems and 40+ committee members) and the Multilingual Categorization task (classifying Wikipedia pages in 30 languages into all 219 ENE categories). Ensemble learning over participant outputs consistently outperformed every individual system, e.g., Airport attribute extraction jumped from 72 (best single system) to 87 F1 through ensemble merging.</p>
+        <p class="why">↳ 30 languages, 219 entity categories, millions of Wikipedia pages structured. Global participation across 10 countries; 40+ PC members from Cambridge, UIUC, NII, Tohoku, and beyond.</p>
+        <div class="tag-row"><span class="tag">NER</span><span class="tag">Multilingual NLP</span><span class="tag">Knowledge Graphs</span><span class="tag">Information Extraction</span><span class="tag">Ensemble Learning</span><span class="tag">Cross-lingual</span></div>
+      </div>
+      <div class="project-card reveal">
+        <p class="project-meta">Kyoto Robotics · 2015</p>
+        <h3>Robotic Arm Trajectory Planning for Confined Spaces</h3>
+        <p class="desc">Designed optimal trajectory planning and collision avoidance for industrial robotic arms operating in confined spaces alongside humans. Integrated structured-light 3D sensing for real-time obstacle and human detection, built predictive collision models to intercept hazards before they occurred, and implemented a digital kill switch, an emergency stop mechanism that instantly overrides all robot motion when human proximity is detected. Validated across a wide range of simulated and controlled scenarios per industrial safety standards.</p>
+        <p class="why">↳ Safety-critical system; earned the NEDO Prize from Japan's Ministry of Economy, Trade &amp; Industry.</p>
+        <div class="tag-row"><span class="tag">Path Planning</span><span class="tag">3D Sensing</span><span class="tag">Collision Avoidance</span><span class="tag">Structured Light</span><span class="tag">Predictive Modeling</span><span class="tag">Human-Robot Safety</span></div>
+      </div>
+      <div class="project-card reveal">
+        <p class="project-meta">Kyoto University / RIKEN · 2015–2021 · Post-Kei &amp; Samurai Projects</p>
+        <h3>Object Tracking under Real-World Uncertainty</h3>
+        <p class="desc">A government-funded R&amp;D project in Japan, a public transportation scenario demanding a tracker that simultaneously handles conflicting challenges: occlusion, clutter, scale change, motion blur, and low resolution, all within a near real-time processing budget. No single classifier handles the full range, and high-performance models are too slow. The core insight was asymmetric co-tracking: a fast but naive classifier handles the incoming stream continuously, and when it encounters uncertainty it queries a slower but more knowledgeable classifier for guidance, active learning as the bridge between speed and accuracy, modified to respect tight latency constraints.<br><br>
+        Follow-on funding unlocked a sequence of extensions, each addressing a remaining failure mode. The fast classifier became an ensemble where each member processed overlapping data windows in a boosting arrangement, spreading the version space more effectively. A mixture of long and short-term memories gave the tracker persistence through extended occlusions. Adversarially generated training samples hardened the model against domain shift. Q-learning replaced hand-tuned heuristics to balance when to consolidate long-term memory versus adapt short-term. An active critic mechanism generated maximally informative samples to promote tighter collaboration between co-learners. Later work embedded tacit knowledge from intermediate CNN layers and applied reinforcement learning to adapt correlation filter parameters on the fly.</p>
+        <p class="why">↳ Delivered on time, results covered in the press. Funded extensions across two government projects spanning six years and 14 publications.</p>
+        <div class="tag-row"><span class="tag">Visual Tracking</span><span class="tag">Active Learning</span><span class="tag">Co-Tracking</span><span class="tag">Ensemble Methods</span><span class="tag">Q-Learning</span><span class="tag">Adversarial Training</span><span class="tag">Reinforcement Learning</span><span class="tag">Computer Vision</span></div>
+      </div>
+      <div class="project-card reveal">
+        <p class="project-meta">Kyoto University / RIKEN · 2015–2022</p>
+        <h3>Smart ASR Captioning for Language Learners</h3>
+        <p class="desc">Started with a meta-analysis that uncovered a key empirical overlap: ASR errors and L2 listening difficulties co-occur on the same speech segments, phonetically dense clusters, fast speech, and low-frequency vocabulary trip up both speech recognizers and second-language listeners alike, making ASR error rate a proxy signal for human listening difficulty without any learner annotations. That finding grounded the core system: PSC, Partial and Synchronized Caption, where forced alignment positions each word in time and the system selectively reveals only the hard segments, synchronized to the audio, scaffolding without dependency. From there, each study added a layer: exploiting ASR errors to choose which words to show, then learner-adaptive personalization through click feedback, then sentence complexity as an additional difficulty signal, then simulated annealing to auto-tune difficulty thresholds per proficiency level, and finally self-regulation training that gradually reduces caption density as learners improve.</p>
+        <p class="why">↳ Comprehension and retention improved significantly (p&lt;0.001) vs. no-caption control. Widely cited and praised in the CALL community. 12 papers, 100+ citations.</p>
+        <div class="tag-row"><span class="tag">ASR</span><span class="tag">Forced Alignment</span><span class="tag">Error Analysis</span><span class="tag">Adaptive Captions</span><span class="tag">L2 Listening</span><span class="tag">Active Learning</span><span class="tag">NLP</span></div>
+      </div>
+      <div class="project-card reveal">
+        <p class="project-meta">RIKEN AIP · 2023–2024</p>
+        <h3>LLM Red-Teaming &amp; Guardrail Alignment</h3>
+        <p class="desc">Fine-tuned LLMs for production deployment and conducted systematic red-teaming to surface safety failures and misalignment. Built evaluation pipelines using LLM-as-a-Judge, RAGA relevancy scoring, and rubric-based assessments. Designed and implemented guardrail alignment layers, prompt injection defense, output filtering, and behavioral constraints, ensuring robust, safe deployment at scale.</p>
+        <p class="why">↳ Responsible AI at production scale, bridging research-quality safety practices with real deployment requirements.</p>
+        <div class="tag-row"><span class="tag">Red-Teaming</span><span class="tag">LLM Fine-Tuning</span><span class="tag">Guardrails</span><span class="tag">LLM-as-Judge</span><span class="tag">RAGA</span><span class="tag">Trust &amp; Safety</span><span class="tag">Alignment</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+<section id="experience">
+  <div class="container">
+    <p class="section-label reveal">Career</p>
+    <h2 class="section-title reveal">Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item reveal"><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-content"><span class="co-type co-type--startup">Startup · Founder</span><p class="date">May 2025 – Present</p><h3>Tech Lead &amp; Chief Scientist</h3><p class="company">SelfMinds AI · Arlington, VA</p><p>Founded and leading AI R&amp;D. Building agentic AI systems, multimodal RAG pipelines, and automation-from-demonstration frameworks.</p></div></div>
+      <div class="timeline-item reveal"><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-content"><span class="co-type co-type--research">Academic R&amp;D</span><p class="date">Apr 2019 – Dec 2025</p><h3>Senior Research Scientist</h3><p class="company">RIKEN National Research Institute (AIP) · Tokyo, Japan / Remote</p><p>Led research on generative AI, multimodal LLMs, multi-task learning, and SHINRA. Published in ACL, Interspeech. Distinguished Reviewer for ACL, AAAI, CVPR, ICML, ECCV.</p></div></div>
+      <div class="timeline-item reveal"><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-content"><span class="co-type co-type--industry">Industry R&amp;D</span><p class="date">Mar 2020 – Mar 2021</p><h3>Computer Vision Lead, R&amp;D</h3><p class="company">Yodayoda Co. Ltd. · Kyoto, Japan</p><p>Led 7-person team building autonomous map generation systems for robots and self-driving vehicles. Secured government funding.</p></div></div>
+      <div class="timeline-item reveal"><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-content"><span class="co-type co-type--postdoc">Postdoctoral Research</span><p class="date">Nov 2015 – Mar 2019</p><h3>Postdoctoral Researcher</h3><p class="company">Kyoto University · Kyoto, Japan</p><p>Three concurrent government-funded projects. Led a team of 8. Won JSPS Kakenhi grant and Kyoto University ICT Innovation Award.</p></div></div>
+      <div class="timeline-item reveal"><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-content"><span class="co-type co-type--industry">Industry</span><p class="date">Apr – Oct 2015</p><h3>R&amp;D Engineer</h3><p class="company">Kyoto Robotics · Kusatsu, Japan</p><p>Path planning, collision detection, and grasp planning for industrial robotic arms in confined spaces. Won NEDO Prize from Japan Ministry of Economy.</p></div></div>
+      <div class="timeline-item reveal"><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-content"><span class="co-type co-type--research">Academic Research</span><p class="date">2012 – 2014</p><h3>Researcher &amp; Research Assistant</h3><p class="company">Kyoto University · Kyoto, Japan</p><p>Object tracking with RGB-D data; face reconstruction; bioimaging and cell signaling ML applications.</p></div></div>
+      <div class="timeline-item reveal"><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-content"><span class="co-type co-type--early">Diverse Roles</span><p class="date">2004 – 2011</p><h3>Early Career</h3><p class="company">Various · Tehran, Iran</p><p>Robotics research (RoboCup 3rd place, 2005), telecom systems, software QA, R&amp;D management, and teaching assistant roles.</p></div></div>
+    </div>
+  </div>
+</section>
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo">Homepage of <strong>Kourosh Meshgi</strong></a>
-									<ul class="icons">
-										<li><a href="https://www.twitter.com/kouroshmeshgi" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="http://jp.linkedin.com/in/kouroshmeshgi" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://github.com/meshgi/" class="icon fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="http://scholar.google.com/citations?user=WejG0Z8AAAAJ&hl=en" class="icon fa-mortar-board"><span class="label">Google Scholar</span></a></li>
-										<li><a href="https://www.semanticscholar.org/author/Kourosh-Meshgi/2146623" class="icon fa-paper-plane "><span class="label">Microsoft Academic research</span></a></li>
-										<li><a href="http://orcid.org/0000-0001-7734-6104" class="icon fa-user"><span class="label">Orcid</span></a></li>
-										<li><a href="https://www.youtube.com/playlist?list=PLxJOR8n0DcHciCixUD5259MRC3YrEAE3G" class="icon fa-youtube-play"><span class="label">YouTube</span></a></li>
-										
-									</ul>
-								</header>
+<section id="research">
+  <div class="container">
+    <p class="section-label reveal">Publications</p>
+    <h2 class="section-title reveal">Research Snapshot</h2>
+    <div class="research-grid">
+      <div class="research-stats reveal">
+        <div class="stat-block">
+          <div class="stat"><p class="number" data-target="44">44</p><p class="label">Conference Papers</p></div>
+          <div class="stat"><p class="number" data-target="7">7</p><p class="label">Journal Papers</p></div>
+          <div class="stat"><p class="number" data-target="1">1</p><p class="label">Book Chapter</p></div>
+          <div class="stat"><p class="number" data-target="500+">500+</p><p class="label">Citations</p></div>
+        </div>
+        <div class="research-links">
+          <a href="https://scholar.google.com/citations?user=WejG0Z8AAAAJ">Google Scholar →</a>
+          <a href="https://dblp.org/pid/meshgi">DBLP →</a>
+          <a href="https://openreview.net/profile?id=~Kourosh_Meshgi1">OpenReview →</a>
+        </div>
+        <p class="section-label" style="margin-bottom:8px">Venues</p>
+        <div class="venue-badges">
+          <span class="venue-badge">ACL</span><span class="venue-badge">CVPR</span><span class="venue-badge">Interspeech</span><span class="venue-badge">ICIP</span><span class="venue-badge">ACCV</span><span class="venue-badge">WWW</span><span class="venue-badge">MVA</span><span class="venue-badge">CRV</span>
+        </div>
+      </div>
+      <div class="research-papers">
+        <div class="paper-card reveal">
+          <span class="paper-venue">CVPR 2018</span>
+          <h4>Efficient Diverse Ensemble for Discriminative Co-Tracking</h4>
+          <p>Built DEDT, an ensemble tracker with artificial diversity generation and active learning. Outperformed state-of-the-art on OTB50, OTB100, and VOT2015.</p>
+          <div class="tag-row"><span class="tag">Computer Vision</span><span class="tag">Active Learning</span><span class="tag">Object Tracking</span></div>
+        </div>
+        <div class="paper-card reveal">
+          <span class="paper-venue">ACL 2022</span>
+          <h4>Q-Learning Scheduler for Multi-Task Learning</h4>
+          <p>Applied reinforcement learning to MTL training scheduling, outperformed 11 baseline schedulers across classification, tagging, and translation tasks.</p>
+          <div class="tag-row"><span class="tag">NLP</span><span class="tag">Multi-Task Learning</span><span class="tag">Reinforcement Learning</span></div>
+        </div>
+        <div class="paper-card reveal">
+          <span class="paper-venue">Interspeech 2021</span>
+          <h4>Adaptive Listening Difficulty Detection for L2 Learners</h4>
+          <p>Used ASR error patterns as a proxy for human listening difficulty, enabling smart adaptive captions that significantly improved comprehension (p&lt;0.001).</p>
+          <div class="tag-row"><span class="tag">ASR</span><span class="tag">Speech</span><span class="tag">Language Learning</span></div>
+        </div>
+        <p style="font-size:.88rem;color:var(--text-muted);margin-top:var(--space-sm)">Full list on <a href="https://scholar.google.com/citations?user=WejG0Z8AAAAJ">Google Scholar</a>. <a href="#papers-carousel" style="color:var(--accent)">Explore papers in depth →</a></p>
+      </div>
+    </div>
 
-							<!-- Banner -->
-								<section id="about">
-									<div class="content">
-										<header>
-											<h1>Kourosh Meshgi</h1>
-											<p></p>
-											<p>RESEARCH SCIENTIST @ <a href="http://www.riken.jp/en/research/labs/aip/" class="logo">RIKEN CENTER OF ADVANCED INTELLIGENCE PROJECT (AIP)</a></p>
-										</header>
-										<p>I am currently a research scientist for the <a href="https://aip.riken.jp/labs/goalorient_tech/lang_inf_access_tech/?lang=en">Language Information Access Technology (LIAT) team </a>, <a href="http://www.riken.jp/en/research/labs/aip/" class="logo">RIKEN AIP</a> under the supervision of Prof. <a href="https://nlp.cs.nyu.edu/sekine/">Satoshi Sekine</a>. I am based in Seattle and have extensive knowledge in machine learning, particularly deep learning and generative AI, not only fine-tuning models but also designing and developing novel architectures and publishing them. 
-											I work on transferring my knowledge from CV to NLP to help knowledge extraction from text, constructing a bridging between large language models (LLMs) and CV tasks, structuring it for higher-level inferences using multi-task learning, as well as delving into the realm of transformers and employing them to solve problems quickly and reliably. Before that, I was a postdoctoral fellow at the <a href="http://www.i.kyoto-u.ac.jp/en/">Graduate School of Informatics</a> at <a href="http://www.kyoto-u.ac.jp/en">Kyoto University</a>, where as a member of the <a href="http://ishiilab.jp/kyoto/en/">Ishii lab</a>, I worked with <a href="http://ishiilab.jp/member/ishii/">Prof. Shin Ishii</a> and <a href="http://ishiilab.jp/member/oba/">Dr. Shigeyuki Oba</a> on the use of active learning in visual tracking and scene understanding, funded by the project of strategic advancement of multi-purpose ultra-human robot and artificial intelligence technologies (SAMURAI) from the New Energy and Industrial Technology Development Organization (<a href="http://www.nedo.go.jp/activities/ZZJP_100106.html">NEDO</a>) and <a href=" https://brain-hpc.jp/">Post-Kei project</a>. I am also collaborating with <a href="http://www.qbic.riken.jp/english/research/outline/lab-11.html">Biochemical Simulation Lab</a> from <a href="https://aics.riken.jp/en/postk/project.html">RIKEN QBiC</a>, <a href="https://www.riken.jp/en/research/labs/aip/goalorient_tech/machine_intell_med_eng/index.html">RIKEN AIP's Machine Intelligence for Medical Engineering Team</a>, and <a href="https://groups.oist.jp/ncu">Neural Computation Unitof OIST</a> on the Exploratory Challenges of Post-K project. I also collaborate with <a href="http://www.riken.jp/en/research/labs/aip/ai_soc/hum_ai_comm/">Human-AI Communication team</a> of <a href="http://www.riken.jp/en/research/labs/aip/">RIKEN AIP</a> under the supervision of <a href="https://www.ii.ist.i.kyoto-u.ac.jp/?page_id=181">Prof. Toyoaki Nishida</a>.</p> 
-										<p>I finished my Ph.D. under the supervision of Prof. Shin Ishii in the same lab, where I worked on occlusion-aware visual tracking, 3D object reconstruction, and imitation learning. In particular, my Ph.D. dissertation was about particle filter-based tracking to handle persistent and complex occlusions by proposing novel occlusion-aware appearance model and context-aware motion model in this framework.
-										</p>
-										<p><strong>Bio:</strong> Kourosh Meshgi received his B.Sc. and M.Sc. in Hardware Engineering (2008) and Artificial Intelligence (2010) respectively, from Tehran Polytechnic and his Ph.D. in Informatics in 2015 from Kyoto University. He is currently a research scientist at RIKEN AIP (remotely working from Seattle, WA) and a guest researcher at Kyoto University. His research interests include machine learning, natural language processing, computer vision, robotics, and computational linguistics. Dr. Meshgi's current research focuses on machine learning, generative AI, and designing, training, deploying, fine-tuning, interpreting, explaining, and orchestrating deep learning models on NLP and CV tasks.</p>
-										<ul class="actions">
-											<li><a href="files/Kourosh_Meshgi_CV_2024_08.pdf" class="button big">Curriculum Vitae</a></li>
-										</ul>
-									</div>
-									<!-- <span class="image object">
-										<img src="images/kourosh meshgi.jpg" alt="Kourosh" width="300"/>
-									</span> -->
-									
-									
-								</section>
-								
-								<script>
-								var slideIndex = 1;
-								showDivs(slideIndex);
+    <div class="threads-toggle-wrapper reveal">
+      <button class="threads-toggle-btn" id="threadsToggle" aria-expanded="false" aria-controls="threadsPanel">
+        <span>Explore research threads</span>
+        <svg class="threads-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+      </button>
+    </div>
+    <div id="threadsPanel" class="threads-panel" hidden>
+      <div class="threads-grid">
+        <div class="thread-card thread-card--tracking">
+          <span class="thread-chip thread-chip--tracking">Visual Tracking</span>
+          <div class="thread-meta"><span>2015–2023</span><span>·</span><span>13 papers</span></div>
+          <h4>Visual Tracking under Adversity</h4>
+          <p class="thread-desc">Robust object tracking in challenging real-world conditions, occlusion, scale change, illumination variation, background clutter, low resolution. Developed ensemble methods, active learning, Q-learning memory balancing, and adversarial domain adaptation for reliable multi-domain tracking.</p>
+          <div class="thread-papers-list">
+            <div class="thread-paper"><span class="thread-paper-venue">CVPR'18</span><span>Efficient Diverse Ensemble for Discriminative Co-Tracking</span></div>
+            <div class="thread-paper"><span class="thread-paper-venue">ICSIPA'17</span><span>Efficient Asymmetric Co-Tracking <strong>(Best Paper)</strong></span></div>
+            <div class="thread-paper"><span class="thread-paper-venue">ICIP'19</span><span>Long &amp; Short Memory Balancing via Q-Learning</span></div>
+            <div class="thread-paper"><span class="thread-paper-venue">ACCV'20</span><span>Adversarial Semi-Supervised Multi-Domain Tracking</span></div>
+            <div class="thread-paper"><span class="thread-paper-venue">ACCV'20</span><span>Leveraging Tacit Information in CNN Layers</span></div>
+          </div>
+          <a href="#papers-carousel" class="thread-papers-link">See full STAR breakdowns in carousel <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        </div>
+        <div class="thread-card thread-card--nlp">
+          <span class="thread-chip thread-chip--nlp">NLP / MTL</span>
+          <div class="thread-meta"><span>2019–2023</span><span>·</span><span>5 papers</span></div>
+          <h4>Multi-Task &amp; Transfer Learning for NLP</h4>
+          <p class="thread-desc">Learning shared representations across diverse NLP tasks without catastrophic forgetting. Explored reinforcement learning for task scheduling, uncertainty-guided regularization, and fine-grained conversational intent classification for implicit attack detection.</p>
+          <div class="thread-papers-list">
+            <div class="thread-paper"><span class="thread-paper-venue">ACL'22</span><span>Q-Learning Scheduler for Multi-Task Learning</span></div>
+            <div class="thread-paper"><span class="thread-paper-venue">ACL'22</span><span>Uncertainty Regularized Multi-Task Learning (WASSA)</span></div>
+            <div class="thread-paper"><span class="thread-paper-venue">WWW'22</span><span>Implicit Attack Detection in Online Conversations</span></div>
+            <div class="thread-paper"><span class="thread-paper-venue">ACL'23</span><span>Fine-Grained Intention Classification</span></div>
+            <div class="thread-paper"><span class="thread-paper-venue">RIKEN</span><span>SHINRA: Multilingual Wikipedia NER (50+ languages)</span></div>
+          </div>
+          <a href="#papers-carousel" class="thread-papers-link">See full STAR breakdowns in carousel <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        </div>
+        <div class="thread-card thread-card--language">
+          <span class="thread-chip thread-chip--language">Language Learning</span>
+          <div class="thread-meta"><span>2015–2022</span><span>·</span><span>12 papers</span></div>
+          <h4>AI for Language Learning</h4>
+          <p class="thread-desc">Adaptive ASR-powered captioning systems for second-language learners. A decade-long program combining speech processing, active learning, and educational technology, producing real-time partial synchronized captions that measurably improve L2 listening comprehension.</p>
+          <div class="thread-papers-list">
+            <div class="thread-paper"><span class="thread-paper-venue">Interspeech'21</span><span>Adaptive Listening Difficulty Detection (iASR)</span></div>
+            <div class="thread-paper"><span class="thread-paper-venue">EuroCALL'19</span><span>Learner-Adaptive Partial Synchronized Captions</span></div>
+            <div class="thread-paper"><span class="thread-paper-venue">EuroCALL'22</span><span>Self-Regulated Listening with Smart Captioning</span></div>
+            <div class="thread-paper"><span class="thread-paper-venue">ReCALL'17</span><span>Partial &amp; Synchronized Captioning (73 citations)</span></div>
+            <div class="thread-paper"><span class="thread-paper-venue">CSL'18</span><span>Exploiting ASR Errors for L2 Listening (26 citations)</span></div>
+          </div>
+          <a href="#papers-carousel" class="thread-papers-link">See full STAR breakdowns in carousel <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-								function plusDivs(n) {
-								  showDivs(slideIndex += n);
-								}
+<section id="papers-carousel">
+  <div class="container">
+    <p class="section-label reveal">Deep Dive</p>
+    <h2 class="section-title reveal">Research in Depth</h2>
+    <p class="reveal" style="color:var(--text-muted);font-size:.95rem;margin-bottom:var(--space-md);margin-top:calc(-1 * var(--space-xs))">16 selected papers across four research threads. Drag or use arrow keys to navigate. Click any card for the full STAR breakdown.</p>
+    <div class="carousel-wrapper reveal">
+      <button class="carousel-btn carousel-btn--prev" aria-label="Previous paper"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4l-4 4 4 4"/></svg></button>
+      <div class="carousel-track" id="carouselTrack" tabindex="0" role="region" aria-label="Paper carousel, use arrow keys to navigate"></div>
+      <button class="carousel-btn carousel-btn--next" aria-label="Next paper"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4l4 4-4 4"/></svg></button>
+    </div>
+    <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Go to paper"></div>
+  </div>
+</section>
 
-								function showDivs(n) {
-								  var i;
-								  var x = document.getElementsByClassName("mySlides");
-								  if (n > x.length) {slideIndex = 1}    
-								  if (n < 1) {slideIndex = x.length}
-								  for (i = 0; i < x.length; i++) {
-									 x[i].style.display = "none";  
-								  }
-								  x[slideIndex-1].style.display = "block";  
-								}
-								</script>
-								
-							<!-- Section -->
-								<section id="publication">
-									<header class="major">
-										<h2 id="pub">Publications</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-language"></span>
-											<div class="content">
-												<h3>Natural Language Processing</h3>
-												<ul class="fa-ul">
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, and S. Sekine, “What is the real intention behind this question? Dataset collection and intention classification”, In Proc. Of <a href="https://2023.aclweb.org/">ACL’23</a>, Toronto, Canada, Jul 2023.
-													   	<a href="https://aclanthology.org/2023.acl-long.761"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+<div class="paper-modal" id="paperModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="paper-modal__overlay"></div>
+  <div class="paper-modal__card">
+    <button class="paper-modal__close" aria-label="Close">×</button>
+    <div class="paper-modal__header">
+      <div class="paper-modal__badges"><span class="paper-modal__venue"></span><span class="paper-modal__thread"></span></div>
+      <h3 id="modalTitle" class="paper-modal__title"></h3>
+    </div>
+    <div class="paper-modal__body">
+      <div class="star-section" data-label="Situation"><p></p></div>
+      <div class="star-section" data-label="Task"><p></p></div>
+      <div class="star-section" data-label="Action"><p></p></div>
+      <div class="star-section" data-label="Result"><p></p></div>
+    </div>
+    <div class="paper-modal__datasets"><p class="paper-modal__datasets-label">Datasets</p><div class="dataset-pills"></div></div>
+    <div class="paper-modal__tags tag-row" style="margin-top:12px"></div>
+  </div>
+</div>
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, and S. Sekine, “Is this Question Real? Dataset Collection on Perceived Intentions and Implicit Attack Detection”, In Proc. of <a href="https://www2022.thewebconf.org/">WWW’22</a>, Lyon, France, Apr 2022.
-														<a href="https://dl.acm.org/doi/10.1145/3485447.3512005"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, M. S. Mirzaei, and S. Sekine, “Uncertainty Regularized Multi-Task Learning,” In Proc. of <a href="https://2022.aclweb.org/">ACL’22</a>, WASSA workshop, Dublin, Ireland, May 2022.
-														<a href="https://aclanthology.org/2022.wassa-1.8/"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
-																		
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, M. S. Mirzaei, and S. Sekine, “Q-Learning Scheduler for Multi Task Learning Through the use of Histogram of Task Uncertainty,” In Proc. of <a href="https://2022.aclweb.org/">ACL’22</a>, RepL4NLP workshop, Dublin, Ireland, May 2022.
-														<a href="https://aclanthology.org/2022.repl4nlp-1.2/"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+<section id="awards">
+  <div class="container">
+    <p class="section-label reveal">Recognition</p>
+    <h2 class="section-title reveal">Awards &amp; Honors</h2>
+    <div class="awards-grid">
+      <div class="award-item reveal"><span class="award-year">2017</span><div><p><strong>JSPS Kakenhi</strong>: Grants-in-Aid for Scientific Research, Japan Society for the Promotion of Science</p></div></div>
+      <div class="award-item reveal"><span class="award-year">2017</span><div><p><strong>ICT Innovation Award</strong>: Kyoto University</p></div></div>
+      <div class="award-item reveal"><span class="award-year">2017</span><div><p><strong>IEEE Best Paper Award</strong>: ICSIPA'17 (Efficient Asymmetric Co-Tracking)</p></div></div>
+      <div class="award-item reveal"><span class="award-year">2015</span><div><p><strong>NEDO Prize</strong>: Japan Ministry of Economy, Trade and Industry</p></div></div>
+      <div class="award-item reveal"><span class="award-year">2011</span><div><p><strong>MEXT Scholarship</strong>: Monbukagakusho, Ministry of Education, Japan (2011–2014)</p></div></div>
+      <div class="award-item reveal"><span class="award-year">2010</span><div><p><strong>Exceptional Talent</strong>: Amirkabir University of Technology (Ranked 1st, AI Dept.)</p></div></div>
+      <div class="award-item reveal"><span class="award-year">2005</span><div><p><strong>3rd Place</strong>: RoboCup International, Soccer Simulation League, Osaka, Japan</p></div></div>
+    </div>
+    <div class="reviewer-box reveal">
+      <h3>Reviewer &amp; Service</h3>
+      <p>Distinguished Reviewer &amp; Organizing Committee: ACL, AAAI, COLING, CVPR, ICML, ECCV, ACCV, Interspeech. Top Reviewer of 2019 (Publons). IEEE Member since 2009.</p>
+    </div>
+  </div>
+</section>
 
-													<li><i class="fa-li fafa-check-square"></i>
-													<strong>K. Meshgi</strong>, and M. S. Mirzaei, “Using Uncertainty for Multi-Domain Text Classification”, In <a href="https://exlingsociety.com/past-proceedings/">ExLing’20</a>, Athens, Greece, Oct 2020.
-														<a href="https://doi.org/10.36505/ExLing-2020/11/0033/000448"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
-																	
-													<li><i class="fa-li fa fa-check-square"></i>
-													S. Ebrahimi, <strong>K. Meshgi</strong>, S. Khadivi, S.E. Shiri Ahmad Abady, “Meta-level Statistical Machine Translation," in Proc. of <a href="https://www.aclweb.org/portal/node/2591">IJCNLP'13</a>, Nagoya, Japan, Oct 2013.
-														<a href="http://aclweb.org/anthology/I/I13/I13-1164.pdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/stacksmt.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="stacksmt.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://www.semanticscholar.org/paper/Meta-level-Statistical-Machine-Translation-Ebrahimi-Meshgi/05524bbef1f3de989a24eee8db3a1bc51ba60735"><i class="fa fa-link"></i></a><a href="#"></a>
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon fa-low-vision"></span>
-											<div class="content">
-												<h3>Computer Vision</h3>
-												<ul class="fa-ul">
-													<li><i class="fa-li fa fa-spinner fa-spin"></i>
-													<strong>K. Meshgi</strong>, M. S. Mirzaei, S. Sekine, “Transformer-based Multi-Task Representation Learning for Robust Visual Tracking,” In Proc. of <a href="https://2024.ieeeicip.org/">ICIP’24</a>, IEEE, Abu Dhabi, UAE, Oct 2024 (submitted).
-														<a href="#"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
-															
-													<li><i class="fa-li fa fa-check-square"></i>
-													A. Kubo, <strong>K. Meshgi</strong>, S. Ishii, “Adaptive Correlation Filters for Visual Tracking via Reinforcement Learning,” <a href="https://www.springer.com/journal/10846">J. of Intelligent & Robotic Systems</a>, 2021.
-														<a href="https://link.springer.com/article/10.1007/s10846-020-01273-2"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+<section id="contact">
+  <div class="container">
+    <p class="section-label reveal">Get in Touch</p>
+    <h2 class="section-title reveal">Let's work together.</h2>
+    <p class="contact-body reveal">I'm currently open to <strong>Senior Applied Scientist</strong>, <strong>Staff Scientist</strong>, and <strong>Technical Lead</strong> roles, particularly in generative AI, multimodal systems, or computer vision. I work well in collaborative environments where I can combine hands-on technical depth with team leadership.<br><br>Based in Arlington, VA. <strong>US Permanent Resident (Green Card)</strong>. Open to remote, hybrid, or on-site (DC metro area preferred).</p>
+    <div class="contact-links reveal">
+      <a href="mailto:kouroshmeshgi@gmail.com" class="contact-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>kouroshmeshgi@gmail.com</a>
+      <a href="https://linkedin.com/in/kouroshmeshgi" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+      <a href="https://github.com/meshgi" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a>
+      <a href="https://scholar.google.com/citations?user=WejG0Z8AAAAJ" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"/></svg>Google Scholar</a>
+      <a href="tel:+13012013939" class="contact-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(301) 201-3939</a>
+    </div>
+  </div>
+</section>
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, M. S. Mirzaei, S. Oba, “Adversarial Semi-Supervised Multi-Domain Tracking,” In Proc. of <a href="https://accv2020.github.io/">ACCV’20</a>, IEEE, Kyoto, Japan, Nov 2020.
-														<a href="https://openaccess.thecvf.com/content/ACCV2020/papers/Meshgi_Adversarial_Semi-Supervised_Multi-Domain_Tracking_ACCV_2020_paper.pdf"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+</main>
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, M. S. Mirzaei, and S. Oba, “Leveraging Tacit Information Embedded in CNN Layers for Visual Tracking,” In Proc. of <a href="https://accv2020.github.io/">ACCV’20</a>, IEEE, Kyoto, Japan, Nov 2020.
-														<a href="https://openaccess.thecvf.com/content/ACCV2020/papers/Meshgi_Leveraging_Tacit_Information_Embedded_in_CNN_Layers_for_Visual_Tracking_ACCV_2020_paper.pdf"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-name">Kourosh Meshgi</p>
+        <p class="footer-tagline">Senior Applied Scientist · ML · Computer Vision · NLP · Generative AI</p>
+      </div>
+      <nav class="footer-social" aria-label="Social links">
+        <a href="https://github.com/meshgi" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+        <a href="https://linkedin.com/in/kouroshmeshgi" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://scholar.google.com/citations?user=WejG0Z8AAAAJ" aria-label="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"/></svg></a>
+        <a href="https://dblp.org/pid/meshgi" aria-label="DBLP"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.5 2C6.25 2 2 6.25 2 11.5S6.25 21 11.5 21 21 16.75 21 11.5 16.75 2 11.5 2zm-1 13.5V8.5l5 3.5-5 3.5z"/></svg></a>
+        <a href="https://openreview.net/profile?id=~Kourosh_Meshgi1" aria-label="OpenReview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></a>
+        <a href="mailto:kouroshmeshgi@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg></a>
+      </nav>
+      <nav class="footer-links" aria-label="Page sections">
+        <a href="#what-i-do">Work</a><a href="#projects">Projects</a><a href="#experience">Experience</a>
+        <a href="#research">Research</a><a href="#papers-carousel">Papers</a><a href="#awards">Awards</a><a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Kourosh Meshgi &middot; Built with care &middot; kouroshmeshgi.com</p>
+    </div>
+  </div>
+</footer>
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, M. S. Mirzaei, and S. Sekine, “Uncertainty Regularized Multi-Task Learning for Text Classification,” in Proc. of <a href="https://www.acml-conf.org/2019/">ACML’19</a>, Weakly Supervised Learning Workshop, Nagoya, Japan, Nov 2019.
-														<a href="#"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, M. S. Mirzaei, S. Oba, “Long and Short Memory Balancing in Visual Co-Tracking using Q-Learning,” in Proc. of <a href="https://2019.ieeeicip.org/">ICIP’19</a>, IEEE, Taipei, Taiwan, Sep 2019.
-													    	<a href="https://ieeexplore.ieee.org/document/8803577"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/qact.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="qact.html"><i class="fa fa-flask"></i></a> 
-														<a href="http://arxiv.org/abs/1902.05211"><i class="fa fa-link"></i></a>
-													
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, M. S. Mirzaei, S. Oba, “Information-Maximizing Sampling to Promote Tracking-by-Detection,” in Proc. of <a href="https://2018.ieeeicip.org/">ICIP’18</a>, IEEE, Athens, Greece, Oct 2018.
-													    	<a href="https://ieeexplore.ieee.org/document/8451725/"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/imst.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="imst.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://arxiv.org/abs/1806.02523"><i class="fa fa-link"></i></a>
-													
-													
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, S. Oba, S. Ishii, “Efficient Diverse Ensemble for Discriminative Co-Tracking,” in Proc. of <a href="http://cvpr2018.thecvf.com/">CVPR’18</a>, IEEE, Salt Lake City, USA, Jun 2018.
-													    <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Meshgi_Efficient_Diverse_Ensemble_CVPR_2018_paper.pdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/dedt.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="dedt.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://arxiv.org/abs/1711.06564"><i class="fa fa-link"></i></a>
-													
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong> and S. Oba “Active Collaboration of Classifiers for Visual Tracking,” in G. Anbarjafari and S. Escalera (Eds) Human-Robot Interaction - Theory and Application, InTech Publication, ISBN 978-953-51-5611-6, 2018.
-													    	<a href="#"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/act.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="act.html"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
-													
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, S.i. Maeda, S. Oba, S. Ishii, “Constructing a Meta-Tracker using Dropout to Imitate the Behavior of an Arbitrary Black-box Tracker,” <a href="https://www.journals.elsevier.com/neural-networks">Journal of Neural Networks</a> vol. 87, pp. 132-148, Elsevier, 2017.
-													    	<a href="http://www.sciencedirect.com/science/article/pii/S0893608016301988"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/mimic.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="mimic.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.1016/j.neunet.2016.12.009"><i class="fa fa-link"></i></a><a href="#"></a>  
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, M. S. Mirzaei, S. Oba, S. Ishii, “Efficient Asymmetric Co-Tracking using Uncertainty Sampling,” in Proc. of <a href="http://spsocmalaysia.org/icsipa2017/">ICSIPA’17</a>, IEEE, Kuching, Malaysia, Sep 2017. <a href="publication/ust/best.jpg">(Best paper award)</a>
-													    	<a href="https://arxiv.org/pdf/1704.00083"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/ust.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="ust.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.1109/ICSIPA.2017.8120614"><i class="fa fa-link"></i></a>
-													
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, M. S. Mirzaei, S. Oba, S. Ishii, “Active Collaborative Ensemble Tracking,” in Proc. of <a href="http://www.avss2017.org/">AVSS’17</a>, IEEE, Lecce, Italy, Aug 2017.
-													    	<a href="https://arxiv.org/abs/1704.08821"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/acet.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="acet.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.1109/AVSS.2017.8078534"><i class="fa fa-link"></i></a>
-													
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, S. Oba, S. Ishii, “Adversarial Sampling to Robustify Active Discriminative Co-Tracking,” in Proc. of <a href="http://cvim.ipsj.or.jp/MIRU2017/">MIRU’17</a>, Hiroshima, Japan, Aug 2017.
-													    	<a href="#"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/asct.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="asct.html"><i class="fa fa-flask"></i></a> 
-														<a href="http://cvim.ipsj.or.jp/MIRU2017/index.php?id=program-oral"><i class="fa fa-link"></i></a>
-													
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, S. Oba, S. Ishii, “Efficient Version-Space Reduction for Visual Tracking,” in Proc. of <a href="http://www.computerrobotvision.org/2017/index.html">CRV’17</a>, IEEE, Vancouver, Canada, May 2017.
-													    	<a href="http://ieeexplore.ieee.org/document/8287686/"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/qbst.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="qbst.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://arxiv.org/pdf/1704.00299"><i class="fa fa-link"></i></a>
-													
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, S. Oba, S. Ishii, “Active Discriminative Tracking using Collective Memory,” in Proc. of <a href="http://www.mva-org.jp/mva2017/">MVA’17</a>, IEEE, Tokyo, Japan, May 2017.
-													    	<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7986879"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/cmt.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="cmt.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.23919/MVA.2017.7986879"><i class="fa fa-link"></i></a>
-													
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, S. Oba, and S. Ishii, “Robust Discriminative Tracking via Query-by-Bagging,” in Proc. of <a href="http://avss2016.org/">AVSS’16</a>, Colorado Springs, USA, Aug 2016.
-													    	<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7986879"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/qbt.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="qbt.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.1109/AVSS.2016.7738027"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, S.i. Maeda, S. Oba, H. Skibbe, Y.Z. Li, S. Ishii, “Occlusion Aware Particle Filter Tracker to Handle Complex and Persistent Occlusions,” <a href="https://www.journals.elsevier.com/computer-vision-and-image-understanding/">Journal of Computer Vision and Image Understanding (CVIU)</a>, vol. 150, pp. 81-94, Elsevier 2016.
-													    	<a href="http://dx.doi.org/10.1016/j.cviu.2016.05.011"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/oaptf.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="oaptf.html"><i class="fa fa-flask"></i></a> 
-														<a href="http://dx.doi.org/10.1016/j.cviu.2016.05.011"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, S.i. Maeda, S. Oba, and S. Ishii, “Data-driven Probabilistic Occlusion Mask to Promote Visual Tracking,” in Proc. of <a href="http://www.computerrobotvision.org/2016/index.html">CRV’16</a>, IEEE, British Columbia, Canada, Jun 2016.
-													    	<a href="http://ieeexplore.ieee.org/document/7801519/"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/occmask.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="occmask.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.1109/CRV.2016.19"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, S. Ishii, “The State-of-the-Art in Handling Occlusions for Visual Object Tracking,” <a href="https://www.jstage.jst.go.jp/browse/transinf/-char/en">IEICE Transactions on Information and Systems</a>, vol. E98-D, no. 7, pp. 1260-1274, IEICE 2015.
-													    	<a href="https://www.jstage.jst.go.jp/article/transinf/E98.D/7/E98.D_2014EDR0002/_pdf/-char/en"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/occmask.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="occmask.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.1587/transinf.2014EDR0002"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, and S. Ishii, “Expanding Histogram of Colors with Gridding to Improve Tracking Accuracy,” in Proc. of <a href="http://www.mva-org.jp/mva2015/">MVA’15</a>, IEEE, Tokyo, Japan, May 2015.
-													    	<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7153234"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/hocx.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="hocx.html"><i class="fa fa-flask"></i></a>  
-														<a href="http://doi.org/10.1109/MVA.2015.7153234"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-square"></i>
-													<strong>K. Meshgi</strong>, S. Maeda, S. Oba, S. Ishii, “Fusion of Multiple Cues from Color and Depth Domains using Occlusion Aware Bayesian Tracker, ” in IEICE Tech. Rep., vol. 113, no. 500, <a href="http://www.ieice.org/ken/program/index.php?tgs_regid=376c1c5a5525e7d39bc18940be9e96fab790c95a292ea92f09e361e959c1c642&lang=eng">NC2014</a>-22, pp. 127-132, Mar 2014.
-													    	<a href="https://pdfs.semanticscholar.org/29ba/f10a11f7f142cddf10582c5d8258e456d741.pdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/oapft1.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="oapft.html"><i class="fa fa-flask"></i></a>  
-														<a href="http://www.ieice.org/ken/paper/20140318BBM3/eng/"><i class="fa fa-link"></i></a>
-													
-													<li><i class="fa-li fa fa-square"></i>
-													<strong>K. Meshgi</strong>, Y.Z. Li, S. Oba, S. Maeda, S. Ishii, “Enhancing Probabilistic Appearance-Based Object Tracking with Depth Information: Object Tracking under Occlusion,” in IEICE Tech. Rep., vol. 113, no. 197, <a href="http://ibisml.org/ibis2013/">IBISML2013</a>-22, pp. 85-91, Sep 2013. 
-													    	<a href="https://pdfs.semanticscholar.org/5e86/77eb21c3a5d24c52bcb93404416f7eeebc31.pdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/oapft2.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="occmask.html"><i class="fa fa-flask"></i></a>  
-														<a href="http://www.ieice.org/ken/paper/20130902SBfY/eng/"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-mortar-board"></i>
-													<strong>K. Meshgi</strong>, “Particle Filter-based Tracking to Handle Persistent and Complex Occlusions and Imitate Arbitrary Black-box Trackers,” Ph.D. Dissertation, Kyoto University, Sep 2015.
-													    	<a href="publication/project-phd/phd.pdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/phd.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="project-phd.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/202747/2/djohk00594.pdf"><i class="fa fa-link"></i></a>
-													
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon fa-cogs"></span>
-											<div class="content">
-												<h3>Computational Linguistics</h3>
-												<ul class="fa-ul">
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, and <strong>K. Meshgi</strong>, “The use of machine learning in developing learner-adaptive tools for second language acquisition”, In Proc. of <a href="https://vigdis.hi.is/en/events/eurocall-2023/">EuroCALL’23</a>, Reykjavík, Iceland, Aug 2023.
-														<a href="https://lnu.diva-portal.org/smash/get/diva2:1846786/FULLTEXT01.pdf"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
-													
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, and <strong>K. Meshgi</strong>, “Self-regulated listening experience with smart captioning”, In Proc. of <a href="https://vigdis.hi.is/en/events/eurocall-2022/">EuroCALL’23</a>, Reykjavík, Iceland, Aug 2022.
-														<a href="http://ocs.editorial.upv.es/index.php/EuroCALL/EuroCALL2023/paper/view/16996/8327"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+  const PAPERS = [
+    { index:0, venue:"ACL 2023", thread:"nlp", threadLabel:"NLP / MTL",
+      title:"What Is the Real Intention Behind This Question?",
+      teaser:"RoBERTa + TF-IDF dictionary achieves best fine-grained intention classification; 'manipulation' requires high-level contextual reasoning.",
+      situation:"Prior work detected binary attack intent; real conversations need fine-grained understanding of intention types (curiosity, manipulation, accusation).",
+      task:"Classify the specific type of negative intention behind questions from conversations that start civilly but escalate to personal attacks.",
+      action:"Extended WWW'22 dataset with fine-grained labels. Built TF-IDF dictionary to augment Transformers. Trained SVM, BERT, XLNet, RoBERTa in binary and multi-class settings.",
+      result:"RoBERTa + TF-IDF-based dictionary yields best multi-class results. 'Manipulation' consistently difficult, requires high-level context. 12 citations.",
+      datasets:["Conversation Gone Awry (Wikipedia Talk Pages)","Question Intention Dataset (2,084 questions)"], tags:["NLP","Intention Classification","RoBERTa","Dataset","Implicit Attacks"] },
+    { index:1, venue:"ACL 2022", thread:"nlp", threadLabel:"NLP / MTL",
+      title:"Q-Learning Scheduler for Multi-Task Learning",
+      teaser:"Deep Q-Learning Scheduler outperforms 11 baseline MTL schedulers across classification, tagging, and translation tasks.",
+      situation:"MTL schedulers typically follow heuristic or fixed strategies, ignoring task relationships and sample complexity dynamics.",
+      task:"Learn an optimal training schedule for MTL networks that maximizes joint performance while avoiding catastrophic forgetting across tasks.",
+      action:"Proposed QLS: deep Q-learning agent monitors task states via histogram of task uncertainty (Monte Carlo dropout); learns scheduling policy through trial-and-error interaction with the MTL network.",
+      result:"QLS consistently outperforms all 11 baselines. Improves MTL accuracy by 2.2% in leave-one-out setting.",
+      datasets:["16 product review datasets","WMT'14 (NMT)","CoNLL NER/POS/Chunking"], tags:["NLP","Multi-Task Learning","Reinforcement Learning","Q-Learning"] },
+    { index:2, venue:"ACL 2022 (WASSA)", thread:"nlp", threadLabel:"NLP / MTL",
+      title:"Uncertainty Regularized Multi-Task Learning",
+      teaser:"UFS-MTL outperforms ASP-MTL and Meta-MTL, with strong transfer to unseen tasks via uncertainty-based regularization.",
+      situation:"Fine-tuning individual tasks in MTL can hurt generalization of the shared representation, a fundamental stability-plasticity trade-off.",
+      task:"Develop an MTL framework that uses uncertainty as a regularization signal to preserve shared feature quality across all tasks.",
+      action:"Introduced UFS-MTL: adds task uncertainty (least confidence / margin / entropy) as regularization penalty to MTL loss, discouraging updates that increase other tasks' uncertainty.",
+      result:"UFS-MTL outperforms FS-MTL, SP-MTL, ASP-MTL, Meta-MTL across most tasks. Strong transfer to unseen tasks in leave-one-out cross-validation.",
+      datasets:["16 text classification datasets","WSJ POS","CoNLL 2000 Chunking","CoNLL 2003 NER"], tags:["NLP","Multi-Task Learning","Uncertainty Estimation","Transfer Learning"] },
+    { index:3, venue:"WWW 2022", thread:"nlp", threadLabel:"NLP / MTL",
+      title:"Is This Question Real? Implicit Attack Detection in Online Conversations",
+      teaser:"BERT detects implicit attack intent in questions from Wikipedia discussions, a new dataset and benchmark for covert negativity detection.",
+      situation:"Questions in online discussions can imply negative intentions without explicit aggression, making automatic detection difficult.",
+      task:"Build a dataset and classifier to detect implicit attack intent in questions from Wikipedia discussion pages.",
+      action:"Collected 2,100 questions from Wikipedia Talk Pages. Annotated with intention polarity and attack type. Trained SVM, LSTM, and BERT models.",
+      result:"BERT achieves best accuracy and F1. Negative intentions have clearer cues; implicit attacks remain challenging even for human annotators.",
+      datasets:["Wikipedia Talk Pages (2,100 questions)"], tags:["NLP","Toxic Language Detection","Dataset","BERT","Online Conversations"] },
+    { index:4, venue:"EuroCALL 2022", thread:"language", threadLabel:"Language Learning",
+      title:"Self-Regulated Listening Experience with Smart Captioning",
+      teaser:"Most learners successfully reduced caption density while maintaining comprehension, PSC works as a scaffolding-removal tool for self-regulation.",
+      situation:"L2 listening tools often provide too much or too little support, preventing learners from developing autonomous self-regulation strategies.",
+      task:"Implement and evaluate a self-regulation-focused PSC system where learners control caption density during TED Talk viewing sessions.",
+      action:"Built PSC with adjustable density controls. Ran online experiment with 33 intermediate English learners (TOEIC 520–725) watching 15–20 min TED Talks.",
+      result:"Most learners gradually reduced caption density while maintaining comprehension. Individual differences significant. Overall positive reception.",
+      datasets:["33 learners (TOEIC 520–725)","TED Talk video sessions","Comprehension test scores"], tags:["Self-Regulated Learning","L2 Listening","Smart Captions","CALL","TED Talks"] },
+    { index:5, venue:"Interspeech 2021", thread:"language", threadLabel:"Language Learning",
+      title:"Adaptive Listening Difficulty Detection for L2 Learners",
+      teaser:"iASR captions significantly improve comprehension (p<0.001) for TED Talk listening tests, beating all non-adaptive caption baselines.",
+      situation:"L2 learners struggle with authentic listening materials; existing captions don't adapt to what is genuinely difficult at a given proficiency level.",
+      task:"Predict segment-level listening difficulty for intermediate L2 learners using ASR errors as a proxy, then generate adaptive partial captions.",
+      action:"Trained an ASR system filtered to intermediate vocabulary. Used simulated annealing to find optimal difficulty thresholds. Created iASR: highlights difficult segments in partial synchronized captions.",
+      result:"iASR outperforms all baseline captioning approaches. Learners scored significantly higher on comprehension (p<0.001) and paraphrasing tests vs. no-caption control.",
+      datasets:["TEDLIUM 2 corpus","Custom annotated TED Talk difficulty dataset"], tags:["ASR","L2 Learning","Adaptive Captions","NLP","Speech Processing"] },
+    { index:6, venue:"ACCV 2020", thread:"tracking", threadLabel:"Visual Tracking",
+      title:"Adversarial Semi-Supervised Multi-Domain Tracking",
+      teaser:"ASPS outperforms state-of-the-art across GOT10K, LaSOT, TrackingNet using adversarial private-shared domain separation.",
+      situation:"Multi-domain trackers suffer from domain-specific features interfering with shared representation, limiting generalization across datasets.",
+      task:"Separate domain-specific and shared features while leveraging labeled and unlabeled video data for robust multi-domain tracking.",
+      action:"Proposed ASPS: adversarial private-shared architecture + regularization for mutual exclusion of feature spaces + self-supervised proxy tasks on unlabeled data.",
+      result:"ASPS outperforms state-of-the-art across GOT10K, OTB50, LaSOT, UAV123, TrackingNet. Especially strong on occlusion, deformation, and scale change.",
+      datasets:["GOT10K","OTB50","LaSOT","UAV123","TrackingNet","YouTubeBB"], tags:["Multi-Domain Tracking","Adversarial Learning","Semi-Supervised","Computer Vision"] },
+    { index:7, venue:"ACCV 2020", thread:"tracking", threadLabel:"Visual Tracking",
+      title:"Leveraging Tacit Information Embedded in CNN Layers for Visual Tracking",
+      teaser:"ACF Tracker adaptively fuses multiple CNN layers with style and temporal regularization, improving accuracy by 2–6% over single-layer baselines.",
+      situation:"Visual tracking performance had plateaued with methods using only a single CNN layer, implicit information stored across different layers remained unexploited.",
+      task:"Develop an adaptive fusion method combining activations from multiple CNN layers within a DCF tracker using style statistics and temporal regularization.",
+      action:"Designed ACF Tracker: adaptive weighting of layers based on past-frame error, style regularization for spatial coherence, and temporal coherence regularization for scale consistency.",
+      result:"ACF Tracker outperformed single-layer DeepDCF and many state-of-the-art trackers. Adaptive layer fusion improved performance by 2–6%. Style regularization reduced jitter.",
+      datasets:["OTB50","OTB100","LaSoT","GOT-10K","VOT2018"], tags:["Visual Tracking","CNN","Deep Learning","DCF","Multi-Layer Fusion"] },
+    { index:8, venue:"ICIP 2020", thread:"gen-ai", threadLabel:"Generative AI",
+      title:"AnimGAN: A Spatiotemporally-Conditioned GAN for Character Animation",
+      teaser:"STC-GAN outperforms traditional C-GANs in generating semantically relevant, realistic character animations, confirmed by mean opinion scores.",
+      situation:"Existing methods for character animation generation struggled with plausible sequences, producing freezing or divergence artifacts.",
+      task:"Develop a spatiotemporally-conditioned GAN that generates animated sequences matching the semantics and dynamics of input sequences.",
+      action:"Proposed STC-GAN: LSTM-based generators for semantic alignment + ST-GCN discriminators for spatiotemporal realism; L1-sparse autoencoders for pose embedding; data augmentation via clustering and sequence modification.",
+      result:"STC-GAN outperformed C-GANs in quality and semantic similarity. Mean opinion scores confirmed improved realism. 19 citations.",
+      datasets:["Emotional Body Motion DB","NTU-RGB+D 120","Kinetics Dataset","KIT Motion Language Dataset"], tags:["Generative AI","GAN","Character Animation","LSTM","Spatiotemporal"] },
+    { index:9, venue:"ICIP 2019", thread:"tracking", threadLabel:"Visual Tracking",
+      title:"Long and Short Memory Balancing in Visual Co-Tracking Using Q-Learning",
+      teaser:"Q-learning agent dynamically decides when to consult an auxiliary classifier, improving accuracy under low-resolution and occlusion.",
+      situation:"Visual co-trackers accumulate label errors over time and struggle with the stability-plasticity trade-off under occlusion and background clutter.",
+      task:"Balance long-term stability and short-term plasticity in a co-tracking framework with minimal computational overhead.",
+      action:"Built QACT: KNN main classifier + SVM auxiliary; Q-learning agent monitors uncertainty margin and decides when to query the auxiliary, trained on YouTubeBB.",
+      result:"QACT outperforms baselines on OTB-50 and OTB-100. Particularly strong improvements in low-resolution and occlusion scenarios.",
+      datasets:["OTB-50","OTB-100","YouTubeBB"], tags:["Visual Tracking","Q-Learning","Active Learning","Reinforcement Learning"] },
+    { index:10, venue:"EuroCALL 2019", thread:"language", threadLabel:"Language Learning",
+      title:"Learner-Adaptive Partial and Synchronized Captions for L2 Listening",
+      teaser:"APSC adapts which words are shown based on learner click feedback, users needed fewer adjustments and reported higher satisfaction.",
+      situation:"Static partial captions cannot adapt to individual learner proficiency, limiting effectiveness across diverse learner populations.",
+      task:"Build an adaptive caption system (APSC) that learns from learner feedback clicks to personalize which words are shown or hidden in real time.",
+      action:"Designed APSC: learners click shown/hidden words as feedback; a classifier retrains on clicks to adjust difficulty thresholds per learner. Evaluated with 24 pre-intermediate learners.",
+      result:"APSC users needed fewer caption adjustments than baseline PSC users. Higher satisfaction scores. Learners reported motivation to use regularly.",
+      datasets:["TED Talk clips","Learner click interaction logs (24 participants)"], tags:["Adaptive Learning","ASR","L2 Listening","Active Learning","CALL"] },
+    { index:11, venue:"CVPR 2018", thread:"tracking", threadLabel:"Visual Tracking",
+      title:"Efficient Diverse Ensemble for Discriminative Co-Tracking",
+      teaser:"DEDT outperforms state-of-the-art on OTB50, OTB100, and VOT2015 through artificial diversity generation and active learning.",
+      situation:"Real-time visual tracking needs a diverse committee of classifiers that cover version space without excessive overlap, otherwise ensemble members make correlated errors.",
+      task:"Design an ensemble tracker with enforced diversity among classifiers, online updates, and long-term memory via auxiliary classifiers.",
+      action:"Built DEDT: generates artificial training data to diversify ensemble members; uses query-by-committee active learning; retrains auxiliary classifiers periodically for long-term memory.",
+      result:"DEDT outperforms state-of-the-art on OTB50, OTB100, and VOT2015. Artificial diversity generation significantly improves ensemble breadth. 33 citations.",
+      datasets:["OTB50","OTB100","VOT2015"], tags:["Computer Vision","Active Learning","Object Tracking","Ensemble Methods"] },
+    { index:12, venue:"ICIP 2018", thread:"tracking", threadLabel:"Visual Tracking",
+      title:"Information-Maximizing Sampling to Promote Tracking-by-Detection",
+      teaser:"IMST uses an adversarial critic to generate boundary samples, outperforming baselines on OTB-50 under scale variation, occlusion, and motion blur.",
+      situation:"Tracking-by-detection approaches selected samples around the last predicted location or used predefined motion models, leaving classifier uncertainty unexploited.",
+      task:"Improve adaptive tracking-by-detection by introducing a sampling strategy that maximizes information gain for the classifier.",
+      action:"Proposed IMST: combines Gaussian sampling with critic-generated adversarial samples near decision boundaries; two classifiers exchange labels via active learning in a structured learning scheme.",
+      result:"IMST outperformed state-of-the-art on OTB-50, with superior performance on scale variation, low resolution, occlusion, and motion blur challenges.",
+      datasets:["OTB-50"], tags:["Visual Tracking","Active Learning","Adversarial Sampling","Tracking-by-Detection"] },
+    { index:13, venue:"CSL 2018", thread:"language", threadLabel:"Language Learning",
+      title:"Exploiting ASR Errors to Enhance Partial and Synchronized Captions for L2 Listening",
+      teaser:"PSC with ASR-derived difficulty cues achieves 26-citation impact, the foundational empirical link between ASR error patterns and L2 listening difficulty.",
+      situation:"Captioning systems for L2 learners either show full text (removing challenge) or hide it entirely. No method existed to selectively reveal only the segments learners truly struggle with.",
+      task:"Establish ASR error rate as a reliable proxy for human L2 listening difficulty, then use it to drive selective partial captions synchronized to audio.",
+      action:"Conducted statistical analysis on TEDLIUM corpus: mapped ASR word error locations onto learner-annotated difficulty regions. Found significant co-occurrence. Built PSC pipeline: forced-alignment positions each word temporally; ASR-error-flagged segments shown; remaining words hidden. Evaluated in controlled L2 listening study.",
+      result:"ASR errors are a statistically significant predictor of L2 listening difficulty (p<0.01). PSC users outperformed full-caption and no-caption conditions on comprehension and vocabulary retention. Paper became the empirical foundation for the entire adaptive caption research thread. 26 citations in Computer Speech & Language (Elsevier).",
+      datasets:["TEDLIUM corpus","L2 learner annotation study (TED Talks)"], tags:["ASR","L2 Listening","Partial Captions","Speech Processing","CALL"] },
+    { index:14, venue:"ICSIPA 2017 ★", thread:"tracking", threadLabel:"Visual Tracking",
+      title:"Efficient Asymmetric Co-Tracking Using Uncertainty Sampling",
+      teaser:"UST wins Best Paper at ICSIPA'17, 28.3 fps asymmetric co-tracker matches state-of-the-art accuracy using uncertainty sampling and smart budgeting.",
+      situation:"Real-world tracking requires balancing accuracy and speed, evaluating many samples per frame is prohibitive, while few samples hurt accuracy under appearance changes.",
+      task:"Develop an efficient co-tracking framework combining a fast short-term detector and a robust long-term classifier, using uncertainty sampling to label borderline samples.",
+      action:"Proposed UST: exemplar-based short-term detector + part-based long-term oracle; uncertainty sampling selects borderline samples for oracle re-labeling; budgeting mechanism caps short-term detector size.",
+      result:"UST achieved state-of-the-art AUC at 28.3 fps on OTB, robust under illumination, scale, and occlusion challenges. Won Best Paper Award at ICSIPA'17.",
+      datasets:["OTB-100"], tags:["Visual Tracking","Uncertainty Sampling","Active Learning","Efficient Tracking","Best Paper"] },
+    { index:15, venue:"MVA 2017", thread:"tracking", threadLabel:"Visual Tracking",
+      title:"Active Discriminative Tracking Using Collective Memory",
+      teaser:"CMT uses multiple classifiers with varying memory spans, matching MUSTer on OTB-50 while robust under occlusion and appearance change.",
+      situation:"Discriminative trackers struggle with the plasticity-stability trade-off: frequent updates cause drift, while rare updates lose target identity under appearance change.",
+      task:"Balance rapid adaptation and long-term stability using classifiers with different memory spans, arbitrated by an active learning scheme.",
+      action:"Introduced CMT: committee of KNN classifiers with varying memory spans + oracle classifier updated periodically; active learner queries most disputed samples from short-term memories for re-labeling.",
+      result:"CMT achieved comparable performance to MUSTer on OTB-50. Robust under occlusion and appearance changes. 9 citations.",
+      datasets:["OTB-50"], tags:["Visual Tracking","Active Learning","Ensemble Methods","Collective Memory","Stability-Plasticity"] },
+    { index:16, venue:"MVA 2015", thread:"tracking", threadLabel:"Visual Tracking",
+      title:"Expanding Histogram of Colors with Gridding to Improve Tracking Accuracy",
+      teaser:"Grid-driven weighted HOC achieves S=90.83% on PETS 2009, adding spatial structure to color histograms significantly improves tracker discrimination.",
+      situation:"Color histograms for tracking lack spatial information and suffer from quantization effects, limiting their discriminative power across appearance changes.",
+      task:"Enhance color histogram descriptors by incorporating spatial layout to improve tracking accuracy without sacrificing compactness.",
+      action:"Proposed 'gridding': decomposes the bounding box into regular grids, computes local histograms per sub-image. Tested grid-driven average HOC and weighted HOC with various similarity measures.",
+      result:"Gridding improved all similarity measures. Grid-driven weighted HOC with KL-divergence achieved best performance (S=90.83%). 38 citations.",
+      datasets:["PETS 2009 (S2.L1 sequence)"], tags:["Visual Tracking","Color Histograms","Spatial Descriptors","Feature Engineering"] }
+  ];
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, and <strong>K. Meshgi</strong>, “Adaptive Listening Difficulty Detection for L2 Learners Through Moderating ASR Resources”, In Proc. of <a href="https://www.interspeech2021.org/">Interspeech’21</a>, Brno, Czechia, Aug 2021.
-														<a href="https://www.sciencedirect.com/science/article/abs/pii/S0885230816303473"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+  const track = document.getElementById('carouselTrack');
+  const dotsContainer = document.getElementById('carouselDots');
+  const CARD_WIDTH = 296;
+  const THREAD_CLASSES = { tracking:'thread--tracking', nlp:'thread--nlp', language:'thread--language', 'gen-ai':'thread--gen-ai' };
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, and <strong>K. Meshgi</strong>, “Facilitating L2 listening through automatic detection of speech and lexical difficulties”, In Proc. of <a href="https://whova.com/web/euroc1_202108/">EuroCALL’21</a>, Paris, France, Aug 2021.
-														<a href="https://files.eric.ed.gov/fulltext/ED617993.pdf"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+  PAPERS.forEach(p => {
+    const slide = document.createElement('div');
+    slide.className = 'paper-slide';
+    slide.dataset.index = p.index;
+    slide.dataset.thread = p.thread;
+    slide.setAttribute('role','button');
+    slide.setAttribute('tabindex','0');
+    slide.setAttribute('aria-label',`${p.venue}: ${p.title}. Press Enter to read full breakdown.`);
+    slide.innerHTML = `
+      <div class="paper-slide__meta">
+        <span class="paper-slide__venue">${p.venue}</span>
+        <span class="paper-slide__thread ${THREAD_CLASSES[p.thread]}">${p.threadLabel}</span>
+      </div>
+      <h4 class="paper-slide__title">${p.title}</h4>
+      <p class="paper-slide__teaser">${p.teaser}</p>
+      <div class="paper-slide__cta" aria-hidden="true">Read STAR breakdown <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>`;
+    track.appendChild(slide);
 
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (p.index === 0 ? ' active' : '');
+    dot.setAttribute('role','tab');
+    dot.setAttribute('aria-label',`Paper ${p.index + 1}: ${p.title}`);
+    dotsContainer.appendChild(dot);
+  });
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, and T. Nishida, “Promoting common ground building in L2 cross-cultural conversations”, In Proc. of <a href="https://whova.com/web/euroc1_202108/">EuroCALL’21</a>, Paris, France, Aug 2021.
-														<a href="https://files.eric.ed.gov/fulltext/ED617916.pdf"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+  const dots = dotsContainer.querySelectorAll('.dot');
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, and T. Nishida “Sentence Complexity as an Indicator of L2 Learner’s Listening Difficulty,” In Proc. of <a href="https://cip.ku.dk/english/events/previous_events/eurocall-2020/">EuroCALL’20</a>, Copenhagen, Denmark, Aug 2020.
-														<a href="https://files.eric.ed.gov/fulltext/ED611114.pdf"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+  /* v6: continuous rAF slow-roll, pauses on hover, resumes on leave */
+  const SCROLL_SPEED = 38; // px per second, slow ambient roll
+  let lastRafTime = null, hovered = false, snapping = false;
+  let isDragging = false, dragX = 0, dragScroll = 0, didDrag = false;
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, and T. Nishida, “A Situation Creation System to Enable Experiential Learning in Virtual Worlds for Developing Cross-Cultural Competencies,” In Proc. of <a href="https://cip.ku.dk/english/events/previous_events/eurocall-2020/">EuroCALL’20</a>, Copenhagen, Denmark, Aug 2020.
-														<a href="https://files.eric.ed.gov/fulltext/ED611113.pdf"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+  function smoothScrollTo(el, to, duration) {
+    snapping = true;
+    const max = el.scrollWidth - el.clientWidth;
+    to = Math.max(0, Math.min(to, max));
+    const from = el.scrollLeft;
+    if (Math.abs(to - from) < 1) { snapping = false; return; }
+    const diff = to - from;
+    const startTime = performance.now();
+    function step(now) {
+      const t = Math.min((now - startTime) / duration, 1);
+      const ease = t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2;
+      el.scrollLeft = from + diff * ease;
+      if (t < 1) requestAnimationFrame(step);
+      else { snapping = false; lastRafTime = null; }
+    }
+    requestAnimationFrame(step);
+  }
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, and <strong>K. Meshgi</strong>, “A Data-driven Caption for L2 Listening”, In Proc. of <a herf="https://exlingsociety.com/past-proceedings/">ExLing’20</a>, Athens, Greece, Oct 2020.
-														<a href="https://doi.org/10.36505/ExLing-2020/11/0042/000457"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+  function rafLoop(ts) {
+    if (lastRafTime !== null && !hovered && !snapping && !isDragging) {
+      const elapsed = ts - lastRafTime;
+      const max = track.scrollWidth - track.clientWidth;
+      if (track.scrollLeft >= max - 0.5) track.scrollLeft = 0;
+      else track.scrollLeft += elapsed / 1000 * SCROLL_SPEED;
+    }
+    lastRafTime = ts;
+    requestAnimationFrame(rafLoop);
+  }
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, “Learner Adaptive Partial and Synchronized Caption for L2 Listening Skill Development,” in Proc. of <a href="https://sites.uclouvain.be/eurocall2019/">EuroCALL’19</a>, Louvain-la-Neuve, Belgium, Aug 2019.
-													    	<a href="#"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/pscec19.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="psc.html"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, “Toward Adaptive Partial and Synchronized Caption to Facilitate L2 Listening,” in Proc. of <a href="https://www.j-let.org/fleatvii/">FLEAT VII</a>, Tokyo, Japan, Aug 2019.
-													    	<a href="#"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/pscfl19.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="psc.html"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, M. S. Mirzaei, “A comprehensive word difficulty index for L2 listening,” in Proc. of <a href="http://exlingworkshop.com/">ExLing’18</a>, Paris, France, Aug 2018.
-													    	<a href="http://exlingworkshop.com/images/ExLing-2018/ExLing-2018-preliminary-proceedings.pdf#page=86"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/pscex18.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="psc.html"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
-													
-													<li><i class="fa-li fa fa-check-square"></i>
-													<strong>K. Meshgi</strong>, M. S. Mirzaei, “A Data-driven Approach to Generate Partial and Synchronized Caption for Second Language Listeners,” in Proc. of <a href="http://worldcall5.org/">WorldCALL’18</a>, Concepcion, Chile, Nov 2018.
-													    	<a href="#"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/pscwc18.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="psc.html"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, “Automatic Scaffolding for L2 Listeners by Leveraging Natural Language Processing,” in Proc. of <a href="https://www.jyu.fi/en/congress/eurocall2018">EuroCALL’18</a>, Jyväskylä, Finland, Aug 2018.
-													    	<a href="#"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/pscec18.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="psc.html"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, T. Kawahara, “Exploiting Automatic Speech Recognition Errors to Enhance Partial and Synchronized Caption for Facilitating Second Language Listening,” <a href="https://www.journals.elsevier.com/computer-speech-and-language">Computer Speech and Language Journal</a>, vol. 49, pp. 17-36, Elsevier 2018.
-													    	<a href="http://www.sciencedirect.com/science/article/pii/S0885230816303473"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/psc2j.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="psc.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.1016/j.csl.2017.11.001"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, Y. Akita, T. Kawahara, “Partial and synchronized captioning: A new tool to assist learners in developing second language listening skill,” <a href="https://www.cambridge.org/core/journals/recall">ReCALL Journal</a>, vol. 29(2), pp. 178-199, Cambridge University Press 2017.
-													    	<a href="https://www.cambridge.org/core/journals/recall/article/div-classtitlepartial-and-synchronized-captioning-a-new-tool-to-assist-learners-in-developing-second-language-listening-skilldiv/9394E3F0AD25FD5F32895F965F7ECCAD"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/psc1j.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="psc.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.1017/S0958344017000039"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, T. Kawahara, “Detecting listening difficulty for second language learners using Automatic Speech Recognition errors,” in Proc. of <a href="http://www.slate2017.org/">SLaTE’17</a>, Stockholm, Sweden, Aug 2017.
-													    	<a href="http://www.slate2017.org/papers/SLaTE_2017_paper_44.pdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/psc2slate.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="psc.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://dx.doi.org/10.21437/SLaTE.2017-27"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, T. Kawahara, “Listening Difficulty Detection to Foster Second Language Listening with Partial and Synchronized Caption,” in Proc. of <a href="http://www.eurocall2017.uk/">EuroCALL’17</a>, Southampton, England, Aug 2017.
-													    	<a href="https://research-publishing.net/publication/chapters/978-2-490057-04-7/715.pdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/pscec17.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="psc.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.14705/rpnet.2017.eurocall2017.715"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, T. Kawahara, “Leveraging automatic speech recognition errors to detect challenging speech segments in TED talks,” in Proc. of <a href="https://eurocall2016.org/">EuroCALL’16</a>, Limassol, Cyprus, Aug 2016.
-													    	<a href="https://research-publishing.net/publication/chapters/978-1-908416-44-5/581.pdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/pscec16.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="psc.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.14705/rpnet.2016.EUROCALL2016.9781908416445"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, T. Kawahara, “Automatic speech recognition errors as a predictor of L2 listening difficulties,” in Proc. of <a href="http://coling2016.anlp.jp/">Coling’16</a> (<a href="https://sites.google.com/site/cl4lc2016/home">CL4LC Workshop</a>), Osaka, Japan, Nov 2016.
-													    	<a href="http://www.aclweb.org/anthology/W/W16/W16-4122.pdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/psc2cl4lc.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="psc.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.1016/j.csl.2017.11.001"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, Y. Akita, T. Kawahara, “Errors in Automatic Speech Recognition versus Difficulties in Second Language Listening, ” in Proc. of <a href="http://www.eurocall2015.it/en/sistemacongressi/eurocall-2015/website/home/">EuroCALL’15</a>, Padova, Italy, Aug 2015.
-													    	<a href="https://reference.research-publishing.net/publication/chapters/978-1-908416-29-2/367.pdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/pscec15.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="psc.html"><i class="fa fa-flask"></i></a> 
-														<a href="https://doi.org/10.14705/rpnet.2015.000367"><i class="fa fa-link"></i></a>
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon fa-signal"></span>
-											<div class="content">
-												<h3>Machine Learning</h3>
-												<ul class="fa-ul">
-													<li><i class="fa-li fa fa-check-square"></i>
-													M. S. Mirzaei, <strong>K. Meshgi</strong>, E. Frigo, and T. Nishida, “AnimGAN: A Spatiotemporally-Conditioned Generative Adversarial Network for Character Animation,” in Proc. of <a href="https://2020.ieeeicip.org/">ICIP’20</a>, IEEE, Abu Dhabi, UAE, Oct 2020.
-														<a href="#"><i class="fa fa-file"></i></a> 
-														<a href="#"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-flask"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
+  track.addEventListener('mouseenter', () => { hovered = true; });
+  track.addEventListener('mouseleave', () => { hovered = false; lastRafTime = null; });
+  track.addEventListener('touchstart', () => { hovered = true; }, { passive:true });
+  track.addEventListener('touchend',   () => { hovered = false; lastRafTime = null; });
 
-													<li><i class="fa-li fa fa-check-square"></i>
-													S. MasoumZadeh, <strong>K. Meshgi</strong>, S. Shiry, G. Taghizadeh, “FQL-RED: An Adaptive Scalable Schema for Active Queue Management,” Int'l. J. of Network Mgmt (IJNM), vol. 21, pp.157-167 Wiley, 2011. 
-													    	<a href="http://onlinelibrary.wiley.com/doi/10.1002/nem.755/epdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/fqlred.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="fqlred.html"><i class="fa fa-flask"></i></a> 
-														<a href="http://doi.org/10.1002/nem.755"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													S. MasoumZadeh, G. Taghizadeh, <strong>K. Meshgi</strong>, S. Shiry, “Deep Blue: A Fuzzy Q-Learning Enhanced Active Queue Management Scheme,” in Proc. of Int'l. Conf. on Adaptive and Intelligent Systems (ICAIS'09), Klagenfurt, Austria, 2009. 
-													    	<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5328070"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/deepblue.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="deepblue.html"><i class="fa fa-flask"></i></a> 
-														<a href="http://doi.org/10.1109/ICAIS.2009.17"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-check-square"></i>
-													S. MasoumZadeh, <strong>K. Meshgi</strong>, S. Shiry, “Adaptive Mutation in Evolution Strategy using Fuzzy Q-Learning,” in Proc. of 13th Iran Computer Association Conf. (ICCSC2008), Kish, Iran, 2008.
-													    	<a href="publication/fql/fqlmutation.pdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/fqlmutation.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="#"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-mortar-board"></i>
-													<strong>K. Meshgi</strong>, “Brain Inspired Face Detection,” M.Sc. Dissertation, Tehran PolyTechnic, Oct 2010.
-													    	<a href="publication/bfd/msc.pdf"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/msc.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="bfd.html"><i class="fa fa-flask"></i></a> 
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon fa-drupal"></span>
-											<div class="content">
-												<h3>Robotics</h3>
-												<ul class="fa-ul">
-													<li><i class="fa-li fa fa-check-square"></i>
-													S. Soleimanpour, S. Shiry, <strong>K. Meshgi</strong>, “Sensor Fusion in Robot Localization using DS-Evidence Theory with Conflict Detection using Mahalanobis Distance,” Proc. of 7th IEEE Int'l. Conf. on Cybernetic Intelligent Systems (<a href="http://www.cybernetic.org.uk/cis2008">CIS'2008</a>), United Kingdom, 2008.
-													    	<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4798964"><i class="fa fa-file"></i></a> 
-														<a href="bibtex/sensorfusion.txt"><i class="fa fa-quote-right"></i></a> 
-														<a href="sensorfusion.html"><i class="fa fa-flask"></i></a> <a href="http://doi.org/10.1109/UKRICIS.2008.4798964"><i class="fa fa-link"></i></a>
-														
-													<li><i class="fa-li fa fa-square"></i>
-													Nemesis 2010 Team Description, <a href="http://robocup2010.org/">RobuCup 2010</a>.
-													    	<a href="publication/robocup/tdp-nemesis-2010-long.pdf"><i class="fa fa-file"></i></a>
-												</ul>
-												<p><br/></p>
-												<p>
-												<strong>Legend:</strong>   <i class="fa fa-check-square">  Peer-reviewed</i>, <i class="fa fa-square">  Not peer-reviewed</i>, <i class="fa fa-spinner">  Under review/publication</i>, <i class="fa fa-mortar-board">  Thesis</i>
-												</p>
-												
-											</div>
-										</article>
-									</div>
-								</section>
-								
-								<!-- Section -->
-								<section id="activities">
-									<header class="major">
-										<h2 id="activities">Activities</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-diamond"></span>
-											<div class="content">
-												<h3>Honors</h3>
-												<ul>
-													<li> Awarded <a href="https://nrid.nii.ac.jp/en/nrid/1000080774835/">JSPS Kakenhi</a> (Grants-in-Aid for Scientific Research), Japan Society for the Promotion of Science, 2017.</li>
-													<li> Won <a href="http://ict-nw.i.kyoto-u.ac.jp/ict-innovation/11th/">ICT Innovation Award</a> for <a href="psc.html">PSC</a>, Kyoto University, 2017.
-													<li> Awarded as <a href="http://www.nedo.go.jp/news/press/AA5_100431.html">Japan Ministry of Economy, Trade and Industry Prize for Winning NEDO Project</a>, as a part of R&D Team, 3D MEDiA Co. Ltd.</a>, 2015.
-													<li> Received Japan Government Monbokagakusho (MEXT) Scholarship from the Ministry of Education, Culture, Sports, Science and Technology, Government of Japan, 2011-2014.
-													<li> Achieved 3rd Place of Int'l. <a href="http://www.robocup2005.org/news/results.aspx">RoboCup 2005 Competitions</a>, Soccer Coach Simulation League, Member of Kasra Team, Osaka, Japan, 2005.
-													<li> Recognized as an Exceptional Talent during Master's Program by Amirkabir University of Technology, 2010 (Ranked 1st in Fall 2008 & 2nd in Spring 2008 semesters in Artificial Intelligence Dept.)
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon  fa-institution"></span>
-											<div class="content">
-												<h3>Affiliations</h3>
-												<ul>
-													<li> <a href="https://www.ieee.org/index.html">IEEE</a> Member (2009~), IEEE <a href="https://securesso.ieee.org/ieeevendorsso/loginservice">Robotics and Automation Society</a> (2010~), <a href="http://rc.signalprocessingsociety.org/">Signal Processing Society</a> (2015~), IEEE <a href="http://www.ieeesmc.org/">Systems, Man, and Cybernetics Society</a> (2017~)
-													<li> <a href="https://calico.org/">CALICO</a> (Computer-Assisted Language Instruction Consortium), 2015~
-													<li> Robocup Soccer Simulation Team Nemesis (2D Sim, 2010), Aria 3D (3D Sim, 2006~2008), and Kasra (2D Coach Sim, 2005) 
-													<li> <a href="http://www.cipprs.org/">CIPPRS</a> (Canadian Image Processing and Pattern Recognition Society) Member, 2017~
-													<li> <a href="http://www.ieice.org/eng/index.html">IEICE</a> (Institute of Electronics, Information and Communication Engineers) Member, 2017~
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon fa-font-awesome"></span>
-											<div class="content">
-												<h3>Services</h3>
-												<ul>
-													<li> Served as a reviewer for IEEE Trans. Of Multimedia, ACM Computing Surveys (CSUR), Journal of Neural Computing and Applications (NCAA), MDPI Journals (Sensors, Future Internet, Electronics, Information) Journal, IEICE Tran. on Information and Systems, Journal of Computer and Communications (JCC), Journal of ICT Research and Applications, and ACL’23, AAAI’23, AACL-IJNLP’22, ACCV’22, COLING’22, CVPR’20, ICML’20, ECCV’20, WiNLP’20, ACL’20, IJCNLP’20, WiNLP’19, ICAIR’16, ICCTS’17 ISCAI’18, FSDM’18, SNSP’18 conferences (<a href="http://publons.com/a/1457709/">Publons page:</a> Top Reviewer of 2019)
-													<li> Organizing Committee of Widening NLP Workshop, WiNLP’2020, Seattle, USA, 2020;</li>
-													<li> Organizing Committee of Widening NLP Workshop, WiNLP’2020, Seattle, USA, 2020;
-													<li> Editorial Member of <a href="http://gavinpublishers.com/journal-of-robotic-engineering-automation-editorial-board/">Journal of Robotics Engineering and Automation Technology</a>, Gavin Publishers, USA, 2017-present.
-													<li> Editorial Member of <a href="http://ojs.whioce.com/index.php/phci/about/editorialTeam">Progress in Human Computer Interaction Journal</a>, Whioce Publishing Pte. Ltd., 2018-present. 
-													<li> <a href="http://icsai.sdju.edu.cn/">Organizing Committee of Int’l Conference on Systems and Informatics</a>, ICSAI’17, Hangzhou, China, 2017.
-													<li> <a href="http://www.ciis2017.org/">Organizing Committee of Int’l Conference on Computing Intelligence and Information System</a>, CIIS’17, Nanjing, China, 2017.
-													<li> <a href="http://www.cst2017.org/">Organizing Committee of Int’l Conference on Computer Science and Technology</a>, ICCST’17, Guilin, China, 2017.
-													<li> Scientific Committee of Intl. Computer Society of Iran Computer Conference, <a href="https://iktconference.ir/2020/Home/Content?id=53">IKT'20</a>, Tehran, Iran, 2020.
-													<li> Organizing Committee of Intl. Computer Society of Iran Computer Conference, CSICC'09, Tehran, Iran, 2009.
-													<li> Organizing Committee of 1st and 2nd Conf. of Information & Knowledge Technology, IKT 2003 & IKT 2005, Tehran, Iran, 2003-2005.
-												</ul>
-											</div>
-										</article>
-									</div>
-								</section>
+  /* drag */
+  track.addEventListener('mousedown', e => {
+    isDragging = true; didDrag = false;
+    dragX = e.pageX - track.offsetLeft; dragScroll = track.scrollLeft;
+    track.classList.add('is-dragging');
+  });
+  document.addEventListener('mouseup', () => {
+    isDragging = false; track.classList.remove('is-dragging'); lastRafTime = null;
+  });
+  track.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const delta = e.pageX - track.offsetLeft - dragX;
+    if (Math.abs(delta) > 4) didDrag = true;
+    track.scrollLeft = dragScroll - delta;
+  });
 
-							<!-- Section -->
-								<section id="projects">
-									<header class="major">
-										<h2>Projects</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="dedt.html" class="image"><img src="publication/dedt/dedt.png" alt="DEDT" /></a>
-											<h3>Efficient Diverse Ensemble for Discriminative Co-Tracking (DEDT)</h3>
-											<p>An active co-tracker with self-organizing committee of classifiers, considering diversity for model update</p>
-											<ul class="actions">
-												<li><a href="dedt.html" class="button">More</a></li>
-											</ul>
-										</article>										
-										<article>
-											<a href="acet.html" class="image"><img src="publication/acet/acet.png" alt="ACET" /></a>
-											<h3>Adversarial Ensemble Co-Tracker (ACET)</h3>
-											<p>An active self-correcting committee of classifiers to perform collaborative tracking</p>
-											<ul class="actions">
-												<li><a href="acet.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="dqcf.html" class="image"><img src="publication/dqcf/dqcf.jpg" alt="DQCF" /></a>
-											<h3>Deep Q-Learning for Correlation Filter Tracking (DQCF)</h3>
-											<p>A correlation filter tracker with reinforcement-learning-tuned learning rate</p>
-											<ul class="actions">
-												<li><a href="dqcf.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="qbst.html" class="image"><img src="publication/qbst/qbst.jpg" alt="QBST" /></a>
-											<h3>Query-by-Boosting Tracker (QBST)</h3>
-											<p>a committee of weak classifiers in a Boosting framework</p>
-											<ul class="actions">
-												<li><a href="qbst.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="cmt.html" class="image"><img src="publication/cmt/cmt.png" alt="CMT" /></a>
-											<h3>Collective Memory Tracker (CMT)</h3>
-											<p>a committee of classifiers with the same data but different memory spans</p>
-											<ul class="actions">
-												<li><a href="cmt.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="qbt.html" class="image"><img src="publication/qbt/qbt.png" alt="QBT" /></a>
-											<h3>Query-by-Bagging Tracker (QBT)</h3>
-											<p>a committee of classifiers with partial knowledge</p>
-											<ul class="actions">
-												<li><a href="qbt.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="mimic.html" class="image"><img src="publication/mimic/mimic.png" alt="" /></a>
-											<h3>Mimic Tracker (MIMIC)</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="mimic.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="imst.html" class="image"><img src="publication/imst/imst.png" alt="IMST" /></a>
-											<h3>Information-Maximizing Sampling Tracker (IMST)</h3>
-											<p>A novel sampling technique to provide most informative samples for the classifiers to learn the target/non-target ever-changing boundary</p>
-											<ul class="actions">
-												<li><a href="imst.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="occmask.html" class="image"><img src="publication/occmask/occmask.png" alt="OCCMASK" /></a>
-											<h3>Data-Driven Probabilistic Occlusion Mask (OccMask)</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="occmask.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="hocx.html" class="image"><img src="publication/hocx/hocx.png" alt="HOCX" /></a>
-											<h3>Expanding Histogram of Colors with Gridding (HOCx)</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="hocx.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="oapft.html" class="image"><img src="publication/oapft/oapft.png" alt="OAPFT" /></a>
-											<h3>Occlusion Aware Particle Filter Tracker (OAPFT)</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="asct.html" class="image"><img src="publication/asct/asct.png" alt="ASCT" /></a>
-											<h3>Adversarial Sampling Co-Tracker (ASCT)</h3>
-											<p>An active co-tracker in which the main classifier is robustified against its adversarial examples by the assistance of the auxiliary detector</p>
-											<ul class="actions">
-												<li><a href="asct.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<!--<article>
-											<a href="occsurvay.html" class="image"><img src="images/pic03.jpg" alt="OCCSURVAY" /></a>
-											<h3>The State-of-the-Art in Handling Occlusions for Visual Object tracking (OccSurvey)</h3>
-											<p>A report on trending literature of occlusion handling in online visual tracking including solutions, datasets, benchmarks, and criteria. </p>
-											<ul class="actions">
-												<li><a href="occsurvay.html" class="button">More</a></li>
-											</ul>
-										</article>-->
-										<article>
-											<a href="psc.html" class="image"><img src="publication/psc/psc2.png" alt="PSC" /></a>
-											<h3>Partial and Synchronized Caption (PSC)</h3>
-											<p>A novel method of captioning as a listening tool for the second language learners in which automatically selected set of words in a caption where words are synced to their corresponding speech signals. <a haref="http://www.ar.media.kyoto-u.ac.jp/psc/#DEMO">Click here</a> (the official project page) to see demonstration videos on how PSC works.</p>
-											<ul class="actions">
-												<li><a href="psc.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="qact.html" class="image"><img src="publication/qact/qact.png" alt="" /></a>
-											<h3>Long and Short Memory Balancing in Visual Co-Tracking using Q-Learning (QACT)</h3>
-											<p>An adaptive active-co tracker, that uses Q-learning to balance the short vs. long memory usage and speed vs. accuracy trade-off</p>
-											<ul class="actions">
-												<li><a href="qact.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<!--<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3>Brain Inspired Face Detection (B-FD)</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>-->
-										
-										<!--<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3>Fuzzy Q-Learning (FQL)</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>-->
-										<!--<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3>Virtual Reality Conversation Envinsioner (VRCE)</h3>
-											<p>We aim to facilitate common ground building and smoothen communication by envisioning the tacit dimensions of interactions and designing agents that can smoothly participate in the conversation with the human. Our present research also focuses designing effective tools for facilitating cross-cultural communications.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article> -->
-									</div>
-								</section>
-							<!-- Section -->
-								<section id="contact">
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<!-- <p>For additional info and data please visit my <a href="old/">old</a> homepage</p> -->
-									<ul class="contact">
-									<ul class="contact">
-										<li class="fa-envelope-o"><a href="#">kourosh.meshgi [at] riken.jp</a></li>
-										<!--<li class="fa-phone">+81 (50) 35005357</li> -->
-										<li class="fa-home">RIKEN AIP, Mitsui Building 15F, 1-4-1 Nihonbashi,Chuo-ku, Tokyo </li>
-									</ul>
-									<div lass="major">
-										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.775329456104!2d139.77244341525872!3d35.68253368019396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889564cd58693%3A0x3b40159699057160!2sRIKEN%20Center%20for%20Advanced%20Intelligence%20Project%20(AIP)!5e0!3m2!1sen!2sjp!4v1675151646399!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-									</div>
-								</section>
-						</div>
-					</div>
+  /* keyboard */
+  track.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { smoothScrollTo(track, track.scrollLeft + CARD_WIDTH, 700); e.preventDefault(); }
+    if (e.key === 'ArrowLeft')  { smoothScrollTo(track, track.scrollLeft - CARD_WIDTH, 700); e.preventDefault(); }
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('paper-slide')) {
+      e.preventDefault(); openModal(parseInt(e.target.dataset.index));
+    }
+  });
 
-		
+  /* arrows */
+  document.querySelector('.carousel-btn--prev').addEventListener('click', () => {
+    smoothScrollTo(track, track.scrollLeft - CARD_WIDTH, 700);
+  });
+  document.querySelector('.carousel-btn--next').addEventListener('click', () => {
+    smoothScrollTo(track, track.scrollLeft + CARD_WIDTH, 700);
+  });
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+  /* dot sync */
+  track.addEventListener('scroll', () => {
+    const idx = Math.round(track.scrollLeft / CARD_WIDTH);
+    dots.forEach((d,i) => d.classList.toggle('active', i === idx));
+  }, { passive:true });
+  dots.forEach((dot,i) => dot.addEventListener('click', () => {
+    smoothScrollTo(track, i * CARD_WIDTH, 700);
+  }));
 
-	</body>
+  requestAnimationFrame(rafLoop);
+
+  /* MODAL */
+  const modal = document.getElementById('paperModal');
+  const MODAL_THREAD_CLASSES = { tracking:'thread--tracking', nlp:'thread--nlp', language:'thread--language', 'gen-ai':'thread--gen-ai' };
+  let lastFocused = null;
+
+  function openModal(idx) {
+    const p = PAPERS[idx]; lastFocused = document.activeElement;
+    modal.querySelector('.paper-modal__venue').textContent = p.venue;
+    const th = modal.querySelector('.paper-modal__thread');
+    th.textContent = p.threadLabel; th.className = 'paper-modal__thread ' + (MODAL_THREAD_CLASSES[p.thread]||'');
+    document.getElementById('modalTitle').textContent = p.title;
+    modal.querySelector('[data-label="Situation"] p').textContent = p.situation;
+    modal.querySelector('[data-label="Task"] p').textContent = p.task;
+    modal.querySelector('[data-label="Action"] p').textContent = p.action;
+    modal.querySelector('[data-label="Result"] p').textContent = p.result;
+    modal.querySelector('.dataset-pills').innerHTML = p.datasets.map(d=>`<span class="dataset-pill">${d}</span>`).join('');
+    modal.querySelector('.paper-modal__tags').innerHTML = p.tags.map(t=>`<span class="tag">${t}</span>`).join('');
+    modal.removeAttribute('hidden'); document.body.style.overflow = 'hidden';
+    modal.querySelector('.paper-modal__close').focus();
+  }
+  function closeModal() {
+    modal.setAttribute('hidden',''); document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+  track.addEventListener('click', e => {
+    const slide = e.target.closest('.paper-slide');
+    if (slide && !didDrag) openModal(parseInt(slide.dataset.index));
+  });
+  modal.querySelector('.paper-modal__overlay').addEventListener('click', closeModal);
+  modal.querySelector('.paper-modal__close').addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeModal(); });
+
+  /* THREADS TOGGLE */
+  const threadsToggle = document.getElementById('threadsToggle');
+  const threadsPanel  = document.getElementById('threadsPanel');
+  threadsToggle.addEventListener('click', () => {
+    const isOpen = threadsToggle.getAttribute('aria-expanded') === 'true';
+    threadsToggle.setAttribute('aria-expanded', String(!isOpen));
+    if (isOpen) { threadsPanel.setAttribute('hidden',''); threadsToggle.querySelector('span').textContent = 'Explore research threads'; }
+    else        { threadsPanel.removeAttribute('hidden');  threadsToggle.querySelector('span').textContent = 'Hide research threads'; }
+  });
+
+  /* MOBILE NAV */
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks   = document.querySelector('.nav-links');
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open'); navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded','false');
+    }));
+  }
+
+  /* NAV SHADOW */
+  const nav = document.querySelector('.site-nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10), { passive:true });
+
+  /* ACTIVE NAV */
+  const sections   = document.querySelectorAll('section[id]');
+  const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+  new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navAnchors.forEach(a => a.classList.remove('active'));
+        const a = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin:'-30% 0px -60% 0px' }).observe === undefined || sections.forEach(s => {});
+  const sectionObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navAnchors.forEach(a => a.classList.remove('active'));
+        const a = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin:'-30% 0px -60% 0px' });
+  sections.forEach(s => sectionObs.observe(s));
+
+  /* STAGGERED REVEAL */
+  document.querySelectorAll('.pillars-grid,.projects-grid').forEach(grid => {
+    grid.querySelectorAll('.reveal').forEach((c,i) => { c.dataset.revealDelay = i * 80; });
+  });
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const delay = parseInt(e.target.dataset.revealDelay||'0');
+        setTimeout(() => e.target.classList.add('visible'), delay);
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold:0.1 });
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  /* STAT COUNTERS */
+  function animateCounter(el) {
+    const raw = el.dataset.target, isPlus = raw.endsWith('+'), target = parseInt(raw);
+    const duration = 1100, start = performance.now();
+    function tick(now) {
+      const t = Math.min((now-start)/duration,1), ease = 1-Math.pow(1-t,3);
+      el.textContent = Math.round(ease*target)+(isPlus?'+':'');
+      if (t<1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  const counterObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && e.target.dataset.target) { animateCounter(e.target); counterObs.unobserve(e.target); }
+    });
+  }, { threshold:0.6 });
+  document.querySelectorAll('.stat .number[data-target]').forEach(el => { el.textContent='0'; counterObs.observe(el); });
+
+  /* SMOOTH SCROLL */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior:'smooth', block:'start' }); }
+    });
+  });
+
+});
+</script>
+</body>
 </html>
